@@ -1,73 +1,73 @@
-# Welcome to your Lovable project
 
-## Project info
+# Debugging Disciples
 
-**URL**: https://lovable.dev/projects/f6ee96a7-7661-4717-95f9-d3a17c5f8e64
+![Debugging Disciples Logo](public/lovable-uploads/1fcf16d5-8905-450b-831c-aa468ed64619.png)
 
-## How can I edit this code?
+## About Us
 
-There are several ways of editing your application.
+**Debugging Disciples** is a welcoming, safe space where young Christian men in Computer Science can openly share challenges, find support, and grow together in faith and technology. Founded in February 2024, we are a brotherhood of believers committed to shaping the tech world through our shared values and expertise.
 
-**Use Lovable**
+## Our Mission
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/f6ee96a7-7661-4717-95f9-d3a17c5f8e64) and start prompting.
+*"Therefore encourage one another and build each other up, just as in fact you are doing."* — 1 Thessalonians 5:11
 
-Changes made via Lovable will be committed automatically to this repo.
+We believe that technology and faith can work hand in hand. Our community provides a platform where Christian men in the tech field can:
 
-**Use your preferred IDE**
+- Share their professional and personal challenges
+- Find mentorship and guidance from fellow believers
+- Grow spiritually while advancing in their careers
+- Build meaningful relationships with like-minded individuals
+- Make a positive impact in the technology industry
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## Who We Are
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+Debugging Disciples is specifically designed for young Christian men pursuing or working in Computer Science and related technology fields. Whether you're a student just starting your journey, a recent graduate entering the workforce, or an experienced professional looking for community, you'll find a place here.
 
-Follow these steps:
+## What We Offer
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### 🙏 **Bible Study Sessions**
+Regular study sessions that explore how faith intersects with our professional lives in technology.
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+### 💬 **Community Support**
+A safe space to share struggles, victories, and prayer requests with brothers who understand the unique challenges of the tech industry.
 
-# Step 3: Install the necessary dependencies.
-npm i
+### 🎵 **Worship & Fellowship**
+Curated playlists and opportunities for worship that resonate with our community's heart for both God and technology.
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+### 📖 **Testimonials**
+Real stories from community members about how God has worked in their lives and careers.
 
-**Edit a file directly in GitHub**
+## Join Our Community
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+We're always looking for new members who share our passion for both faith and technology. If you're a Christian man in Computer Science looking for community, support, and spiritual growth, we'd love to have you join us.
 
-**Use GitHub Codespaces**
+### How to Get Involved
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+1. **Visit our website** to learn more about our community
+2. **Attend a Bible study session** to experience our fellowship firsthand
+3. **Connect with other members** through our community platform
+4. **Share your story** and contribute to our growing collection of testimonials
 
-## What technologies are used for this project?
+## Our Values
 
-This project is built with:
+- **Faith First**: We believe that our relationship with God is the foundation of everything we do
+- **Brotherhood**: We support and encourage one another through all of life's challenges
+- **Excellence**: We strive for excellence in both our spiritual lives and our professional work
+- **Service**: We seek to use our skills and talents to serve God and others
+- **Growth**: We are committed to continuous learning and development in all areas of life
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## Technology Stack
 
-## How can I deploy this project?
+This website is built with modern web technologies:
+- **React** with TypeScript for robust, type-safe development
+- **Tailwind CSS** for responsive, modern styling
+- **Vite** for fast development and building
+- **Shadcn UI** for beautiful, accessible components
 
-Simply open [Lovable](https://lovable.dev/projects/f6ee96a7-7661-4717-95f9-d3a17c5f8e64) and click on Share -> Publish.
+## Connect With Us
 
-## Can I connect a custom domain to my Lovable project?
+Ready to join our community of Christian technologists? Visit our website and take the first step toward meaningful fellowship and spiritual growth in the tech world.
 
-Yes, you can!
+---
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+*Building the future, one line of code and one prayer at a time.* 🙏💻
