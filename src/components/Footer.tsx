@@ -1,5 +1,5 @@
 
-import { Slack, Spotify, Heart } from 'lucide-react';
+import { Slack, Music, Heart } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -51,7 +51,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="flex items-center space-x-2 text-gray-400 hover:text-green-400 transition-colors"
               >
-                <Spotify className="w-5 h-5" />
+                <Music className="w-5 h-5" />
                 <span>Our Playlist</span>
               </a>
               <div className="flex items-center space-x-2 text-gray-400">

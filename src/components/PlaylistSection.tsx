@@ -1,7 +1,7 @@
 
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Music, Headphones, Spotify } from 'lucide-react';
+import { Music, Headphones, Users } from 'lucide-react';
 
 const PlaylistSection = () => {
   return (
@@ -57,7 +57,7 @@ const PlaylistSection = () => {
           <div className="space-y-6">
             {/* Spotify Embed Placeholder */}
             <div className="bg-gradient-to-br from-green-500/20 to-tech-accent/20 rounded-2xl p-8 border border-green-500/30 text-center">
-              <Spotify className="w-16 h-16 text-green-400 mx-auto mb-4" />
+              <Music className="w-16 h-16 text-green-400 mx-auto mb-4" />
               <h3 className="text-2xl font-bold text-white mb-4">Debugging Disciples Playlist</h3>
               <p className="text-gray-300 mb-6">
                 50+ tracks of faith-filled hip-hop to inspire your journey
@@ -94,7 +94,7 @@ const PlaylistSection = () => {
                   rel="noopener noreferrer"
                   className="flex items-center justify-center space-x-2"
                 >
-                  <Spotify className="w-5 h-5" />
+                  <Music className="w-5 h-5" />
                   <span>Open in Spotify</span>
                 </a>
               </Button>
