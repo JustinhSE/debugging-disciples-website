@@ -10,10 +10,24 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-gradient-to-br from-tech-dark via-brand-cyan/10 to-brand-purple/10"></div>
       <div className="absolute inset-0 circuit-pattern opacity-30"></div>
       
-      {/* Floating Elements */}
+      {/* Floating Star Elements */}
       <div className="absolute top-20 left-10 w-2 h-2 bg-brand-cyan rounded-full animate-glow"></div>
       <div className="absolute top-40 right-20 w-1 h-1 bg-brand-purple rounded-full animate-glow" style={{ animationDelay: '1s' }}></div>
       <div className="absolute bottom-32 left-1/4 w-1.5 h-1.5 bg-brand-cyan rounded-full animate-glow" style={{ animationDelay: '2s' }}></div>
+      
+      {/* Additional Stars */}
+      <div className="absolute top-32 left-1/3 w-1 h-1 bg-white rounded-full animate-glow" style={{ animationDelay: '0.5s' }}></div>
+      <div className="absolute top-16 right-1/3 w-1.5 h-1.5 bg-brand-purple rounded-full animate-glow" style={{ animationDelay: '1.5s' }}></div>
+      <div className="absolute top-60 left-16 w-1 h-1 bg-brand-cyan rounded-full animate-glow" style={{ animationDelay: '2.5s' }}></div>
+      <div className="absolute bottom-40 right-16 w-2 h-2 bg-white rounded-full animate-glow" style={{ animationDelay: '3s' }}></div>
+      <div className="absolute top-80 right-1/4 w-1 h-1 bg-brand-purple rounded-full animate-glow" style={{ animationDelay: '3.5s' }}></div>
+      <div className="absolute bottom-20 left-1/2 w-1.5 h-1.5 bg-brand-cyan rounded-full animate-glow" style={{ animationDelay: '4s' }}></div>
+      <div className="absolute top-24 left-2/3 w-1 h-1 bg-white rounded-full animate-glow" style={{ animationDelay: '4.5s' }}></div>
+      <div className="absolute bottom-60 right-1/3 w-2 h-2 bg-brand-purple rounded-full animate-glow" style={{ animationDelay: '5s' }}></div>
+      <div className="absolute top-48 left-8 w-1 h-1 bg-brand-cyan rounded-full animate-glow" style={{ animationDelay: '5.5s' }}></div>
+      <div className="absolute bottom-80 right-8 w-1.5 h-1.5 bg-white rounded-full animate-glow" style={{ animationDelay: '6s' }}></div>
+      <div className="absolute top-36 right-12 w-1 h-1 bg-brand-purple rounded-full animate-glow" style={{ animationDelay: '0.2s' }}></div>
+      <div className="absolute bottom-24 left-20 w-2 h-2 bg-brand-cyan rounded-full animate-glow" style={{ animationDelay: '1.2s' }}></div>
 
       <div className="container mx-auto px-4 text-center relative z-10">
         <div className="max-w-4xl mx-auto animate-fade-in">
