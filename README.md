@@ -31,7 +31,7 @@ Regular study sessions that explore how faith intersects with our professional l
 ### 💬 **Community Support**
 A safe space to share struggles, victories, and prayer requests with brothers who understand the unique challenges of the tech industry.
 
-### 🎵 **Worship & Fellowship**
+### 🎵 **Praise & Fellowship**
 Curated playlists and opportunities for worship that resonate with our community's heart for both God and technology.
 
 ### 📖 **Testimonials**
