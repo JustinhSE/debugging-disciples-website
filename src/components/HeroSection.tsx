@@ -18,7 +18,7 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 text-center relative z-10">
         <div className="max-w-4xl mx-auto animate-fade-in">
           {/* Main Heading */}
-          <h1 className="text-5xl md:text-7xl font-bold mt-5 mb-6 leading-tight">
+          <h1 className="text-5xl md:text-7xl font-bold mt-12 mb-6 leading-tight">
             <span className="bg-gradient-to-r from-white via-brand-cyan to-brand-purple bg-clip-text text-transparent">
               Brotherhood of Believers
             </span>
