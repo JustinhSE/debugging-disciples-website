@@ -1,11 +1,13 @@
 
 import { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,21 +18,13 @@ const Navigation = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      setIsMobileMenuOpen(false);
-    }
-  };
-
   const navItems = [
-    { label: 'Home', id: 'home' },
-    { label: 'About', id: 'about' },
-    { label: 'Bible Study', id: 'bible-study' },
-    { label: 'Playlist', id: 'playlist' },
-    { label: 'Testimonials', id: 'testimonials' },
-    { label: 'Join Us', id: 'join' },
+    { label: 'Home', path: '/' },
+    { label: 'About', path: '/about' },
+    { label: 'Bible Study', path: '/bible-study' },
+    { label: 'Playlist', path: '/playlist' },
+    { label: 'Testimonials', path: '/testimonials' },
+    { label: 'Join Us', path: '/join' },
   ];
 
   return (
@@ -39,32 +33,38 @@ const Navigation = () => {
     }`}>
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-br from-tech-accent to-purple-500 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">DD</span>
-            </div>
-            <span className="text-xl font-bold bg-gradient-to-r from-tech-accent to-purple-400 bg-clip-text text-transparent">
+          <Link to="/" className="flex items-center space-x-3">
+            <img 
+              src="/lovable-uploads/1fcf16d5-8905-450b-831c-aa468ed64619.png" 
+              alt="Debugging Disciples Logo" 
+              className="w-10 h-10 object-contain"
+            />
+            <span className="text-xl font-bold bg-gradient-to-r from-brand-cyan to-brand-purple bg-clip-text text-transparent">
               Debugging Disciples
             </span>
-          </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
-              <button
-                key={item.id}
-                onClick={() => scrollToSection(item.id)}
-                className="text-gray-300 hover:text-tech-accent transition-colors relative group"
+              <Link
+                key={item.path}
+                to={item.path}
+                className={`text-gray-300 hover:text-brand-cyan transition-colors relative group ${
+                  location.pathname === item.path ? 'text-brand-cyan' : ''
+                }`}
               >
                 {item.label}
-                <span className="absolute inset-x-0 -bottom-1 h-0.5 bg-tech-accent scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
-              </button>
+                <span className={`absolute inset-x-0 -bottom-1 h-0.5 bg-brand-cyan transition-transform origin-left ${
+                  location.pathname === item.path ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
+                }`}></span>
+              </Link>
             ))}
             <Button 
-              onClick={() => scrollToSection('join')}
-              className="bg-gradient-to-r from-tech-accent to-purple-500 hover:from-tech-accent/80 hover:to-purple-500/80 text-white"
+              asChild
+              className="bg-gradient-to-r from-brand-cyan to-brand-purple hover:from-brand-cyan/80 hover:to-brand-purple/80 text-white"
             >
-              Join Community
+              <Link to="/join">Join Community</Link>
             </Button>
           </div>
 
@@ -84,19 +84,23 @@ const Navigation = () => {
           <div className="md:hidden absolute top-full left-0 right-0 bg-tech-dark/95 backdrop-blur-md border-b border-white/10">
             <div className="container mx-auto px-4 py-4 space-y-4">
               {navItems.map((item) => (
-                <button
-                  key={item.id}
-                  onClick={() => scrollToSection(item.id)}
-                  className="block w-full text-left text-gray-300 hover:text-tech-accent transition-colors py-2"
+                <Link
+                  key={item.path}
+                  to={item.path}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className={`block w-full text-left text-gray-300 hover:text-brand-cyan transition-colors py-2 ${
+                    location.pathname === item.path ? 'text-brand-cyan' : ''
+                  }`}
                 >
                   {item.label}
-                </button>
+                </Link>
               ))}
               <Button 
-                onClick={() => scrollToSection('join')}
-                className="w-full bg-gradient-to-r from-tech-accent to-purple-500 hover:from-tech-accent/80 hover:to-purple-500/80 text-white"
+                asChild
+                className="w-full bg-gradient-to-r from-brand-cyan to-brand-purple hover:from-brand-cyan/80 hover:to-brand-purple/80 text-white"
+                onClick={() => setIsMobileMenuOpen(false)}
               >
-                Join Community
+                <Link to="/join">Join Community</Link>
               </Button>
             </div>
           </div>

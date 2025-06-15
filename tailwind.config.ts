@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -63,13 +62,15 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Custom tech nighttime theme colors
-				'tech-dark': '#0a0a0f',
-				'tech-darker': '#050507',
-				'tech-blue': '#1e3a8a',
-				'tech-purple': '#581c87',
-				'tech-cyan': '#0891b2',
-				'tech-accent': '#3b82f6',
+				// Updated tech nighttime theme colors to match your logo
+				'tech-dark': '#000000',
+				'tech-darker': '#0a0a0a',
+				'tech-blue': '#3b82f6',
+				'tech-purple': '#8b5cf6',
+				'tech-cyan': '#06b6d4',
+				'tech-accent': '#06b6d4', // Changed to cyan to match logo
+				'brand-cyan': '#06b6d4',
+				'brand-purple': '#8b5cf6',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -127,7 +128,7 @@ export default {
 			backgroundImage: {
 				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
 				'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-				'tech-gradient': 'linear-gradient(135deg, #1e3a8a 0%, #581c87 50%, #0891b2 100%)',
+				'tech-gradient': 'linear-gradient(135deg, #06b6d4 0%, #8b5cf6 50%, #3b82f6 100%)',
 			}
 		}
 	},

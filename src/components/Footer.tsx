@@ -8,11 +8,13 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-8">
           {/* Brand */}
           <div className="space-y-4">
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-br from-tech-accent to-purple-500 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">DD</span>
-              </div>
-              <span className="text-xl font-bold bg-gradient-to-r from-tech-accent to-purple-400 bg-clip-text text-transparent">
+            <div className="flex items-center space-x-3">
+              <img 
+                src="/lovable-uploads/1fcf16d5-8905-450b-831c-aa468ed64619.png" 
+                alt="Debugging Disciples Logo" 
+                className="w-10 h-10 object-contain"
+              />
+              <span className="text-xl font-bold bg-gradient-to-r from-brand-cyan to-brand-purple bg-clip-text text-transparent">
                 Debugging Disciples
               </span>
             </div>
@@ -26,16 +28,16 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="text-lg font-bold text-white">Community</h3>
             <div className="space-y-2">
-              <a href="#about" className="block text-gray-400 hover:text-tech-accent transition-colors">
+              <a href="/about" className="block text-gray-400 hover:text-brand-cyan transition-colors">
                 About Us
               </a>
-              <a href="#bible-study" className="block text-gray-400 hover:text-tech-accent transition-colors">
+              <a href="/bible-study" className="block text-gray-400 hover:text-brand-cyan transition-colors">
                 Bible Study
               </a>
-              <a href="#testimonials" className="block text-gray-400 hover:text-tech-accent transition-colors">
+              <a href="/testimonials" className="block text-gray-400 hover:text-brand-cyan transition-colors">
                 Testimonials
               </a>
-              <a href="#join" className="block text-gray-400 hover:text-tech-accent transition-colors">
+              <a href="/join" className="block text-gray-400 hover:text-brand-cyan transition-colors">
                 Join Us
               </a>
             </div>
@@ -86,7 +88,7 @@ const Footer = () => {
             <p className="text-gray-300 italic mb-2">
               "Therefore encourage one another and build each other up, just as in fact you are doing."
             </p>
-            <p className="text-tech-accent font-semibold">— 1 Thessalonians 5:11</p>
+            <p className="text-brand-cyan font-semibold">— 1 Thessalonians 5:11</p>
           </div>
         </div>
       </div>
