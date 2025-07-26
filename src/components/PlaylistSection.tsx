@@ -60,7 +60,7 @@ const PlaylistSection = () => {
               <Music className="w-16 h-16 text-green-400 mx-auto mb-4" />
               <h3 className="text-2xl font-bold text-white mb-4">Debugging Disciples Playlist</h3>
               <p className="text-gray-300 mb-6">
-                50+ tracks of faith-filled hip-hop to inspire your journey
+                100+ tracks of faith-filled hip-hop to inspire your journey
               </p>
               
               {/* Simulated Spotify Player */}
