@@ -11,11 +11,6 @@ const JoinSection = () => {
       description: "Fill out our simple application form to tell us about yourself and your faith journey."
     },
     {
-      icon: Users,
-      title: "Meet the Team",
-      description: "Have a brief video call with one of our community leaders to get to know each other."
-    },
-    {
       icon: Slack,
       title: "Join Slack",
       description: "Get invited to our Slack workspace where all the daily conversations and connections happen."
@@ -30,7 +25,6 @@ const JoinSection = () => {
   const benefits = [
     "24/7 access to a supportive community of Christian men in tech",
     "Weekly Bible studies designed for busy college schedules",
-    "Career mentorship from experienced professionals",
     "Prayer support during challenging seasons",
     "Networking opportunities with like-minded believers",
     "Resources for integrating faith and technology"
