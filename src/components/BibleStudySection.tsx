@@ -103,11 +103,15 @@ const BibleStudySection = () => {
             <div className="bg-gradient-to-r from-tech-accent/20 to-purple-500/20 rounded-xl p-6 border border-tech-accent/30">
               <h4 className="text-lg font-bold text-white mb-3">Current Series</h4>
               <p className="text-gray-300 mb-4">
-                "Integrity in the Digital Age" - Exploring how to live out our faith authentically 
-                in the modern tech world, making ethical decisions, and being salt and light in our workplaces.
+                We're reading Acts and discussing how its lessons apply to us as men in the brotherhood. Whether in college or just starting our careers, we all face unique challenges and opportunities to live out our faith.
               </p>
-              <Button className="bg-gradient-to-r from-tech-accent to-purple-500 hover:from-tech-accent/80 hover:to-purple-500/80 text-white">
-                Join This Sunday
+              <Button
+                asChild
+                className="bg-gradient-to-r from-tech-accent to-purple-500 hover:from-tech-accent/80 hover:to-purple-500/80 text-white"
+              >
+                <a href="/join">
+                  Join This Sunday
+                </a>
               </Button>
             </div>
           </div>

@@ -7,7 +7,7 @@ const Playlist = () => {
   return (
     <div className="min-h-screen bg-tech-dark text-white overflow-x-hidden">
       <Navigation />
-      <div className="pt-20">
+      <div className="pt-15">
         <PlaylistSection />
       </div>
       <Footer />

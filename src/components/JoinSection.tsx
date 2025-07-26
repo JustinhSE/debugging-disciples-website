@@ -1,7 +1,7 @@
 
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Slack, Users, MessageSquare, Calendar, CheckCircle } from 'lucide-react';
+import { Slack, MessageSquare, Calendar, CheckCircle } from 'lucide-react';
 
 const JoinSection = () => {
   const steps = [
@@ -105,16 +105,18 @@ const JoinSection = () => {
               Click the button below to begin your application. We typically respond within 24-48 hours 
               and would love to welcome you into our community!
             </p>
-            <Button 
-              size="lg"
-              className="bg-gradient-to-r from-tech-accent to-purple-500 hover:from-tech-accent/80 hover:to-purple-500/80 text-white px-8 py-4 text-lg glow-blue w-full sm:w-auto"
+            <a
+              href="https://forms.gle/6s5EJ1FPXgmyVXsQ7"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              Apply to Join Community
-            </Button>
-          </div>
-
-          <div className="text-center text-gray-400 text-sm">
-            <p>Questions? Reach out to us at community@debuggingdisciples.org</p>
+              <Button 
+                size="lg"
+                className="bg-gradient-to-r from-tech-accent to-purple-500 hover:from-tech-accent/80 hover:to-purple-500/80 text-white px-8 py-4 text-lg glow-blue w-full sm:w-auto"
+              >
+                Apply to Join Community
+              </Button>
+            </a>
           </div>
         </div>
       </div>

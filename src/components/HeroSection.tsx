@@ -18,7 +18,7 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 text-center relative z-10">
         <div className="max-w-4xl mx-auto animate-fade-in">
           {/* Main Heading */}
-          <h1 className="text-5xl md:text-7xl font-bold mt-12 mb-6 leading-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mt-6 sm:mt-12 mb-4 sm:mb-6 leading-tight">
             <span className="bg-gradient-to-r from-white via-brand-cyan to-brand-purple bg-clip-text text-transparent">
               Brotherhood of Believers
             </span>
@@ -29,25 +29,25 @@ const HeroSection = () => {
           </h1>
 
           {/* Subtitle */}
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed">
             A welcoming, safe space where young Christian men in Computer Science can openly share challenges, 
             find support, and grow together in faith and tech.
           </p>
 
           {/* Bible Verse */}
-          <div className="bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-sm rounded-2xl p-6 mb-12 border border-white/10 max-w-2xl mx-auto">
-            <p className="text-lg italic text-gray-200 mb-2">
+          <div className="bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-sm rounded-2xl p-4 sm:p-6 mb-8 sm:mb-12 border border-white/10 max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg italic text-gray-200 mb-2">
               "Therefore encourage one another and build each other up, just as in fact you are doing."
             </p>
             <p className="text-brand-cyan font-semibold">— 1 Thessalonians 5:11</p>
           </div>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8 sm:mb-16">
             <Button 
               asChild
               size="lg"
-              className="bg-gradient-to-r from-brand-cyan to-brand-purple hover:from-brand-cyan/80 hover:to-brand-purple/80 text-white px-8 py-4 text-lg glow-blue"
+              className="bg-gradient-to-r from-brand-cyan to-brand-purple hover:from-brand-cyan/80 hover:to-brand-purple/80 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg glow-blue"
             >
               <Link to="/join">Join Our Community</Link>
             </Button>
@@ -55,7 +55,7 @@ const HeroSection = () => {
               asChild
               variant="outline"
               size="lg"
-              className="border-white/20 text-white hover:bg-white/10 px-8 py-4 text-lg"
+              className="border-white/20 text-white hover:bg-white/10 px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg"
             >
               <Link to="/about">Learn More</Link>
             </Button>
