@@ -7,7 +7,7 @@ const AboutSection = () => {
     {
       icon: Users,
       title: 'Community',
-      description: 'Building meaningful connections among Christian men in tech, fostering brotherhood that transcends borders.',
+      description: 'Building meaningful connections among Christian men in tech, fostering authentic brotherhood that moves past the surface.',
     },
     {
       icon: Heart,
@@ -32,8 +32,8 @@ const AboutSection = () => {
             </span>
           </h2>
           <p className="text-xl text-gray-300 leading-relaxed">
-            Founded in February 2024, we've grown into a global community of 150+ Christian men 
-            pursuing Computer Science. Our mission is simple: to provide a place where faith and 
+            Founded in February 2024, we've grown into a global community of Christian men 
+            pursuing STEM careers. Our mission is simple: to provide a place where faith and 
             technology intersect, where brotherhood flourishes, and where each member is encouraged 
             to become the man God has called him to be.
           </p>
@@ -54,7 +54,7 @@ const AboutSection = () => {
             </p>
             <div className="flex items-center space-x-4 pt-4">
               <div className="text-center">
-                <div className="text-3xl font-bold text-tech-accent">150+</div>
+                <div className="text-3xl font-bold text-tech-accent">250</div>
                 <div className="text-sm text-gray-400">Members</div>
               </div>
               <div className="text-center">

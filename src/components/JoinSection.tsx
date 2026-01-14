@@ -26,7 +26,6 @@ const JoinSection = () => {
     "24/7 access to a supportive community of Christian men in tech",
     "Weekly Bible studies designed for busy college schedules",
     "Prayer support during challenging seasons",
-    "Networking opportunities with like-minded believers",
     "Resources for integrating faith and technology"
   ];
 
@@ -42,11 +41,32 @@ const JoinSection = () => {
           </h2>
           <p className="text-xl text-gray-300 leading-relaxed">
             Ready to connect with Christian brothers who share your passion for technology? 
-            Join our growing community of 150+ members worldwide.
+            <br />Join our growing community of 250 members worldwide.
           </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 mb-16">
+          <div className="space-y-6">
+            {steps.map((step, index) => (
+              <Card key={index} className="bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-sm border-white/10 p-7 hover:scale-105 transition-transform duration-300">
+                <div className="flex items-center space-x-4">
+                  <div className="flex-shrink-0">
+                    <div className="w-12 h-12 bg-gradient-to-br from-tech-accent to-purple-500 rounded-full flex items-center justify-center">
+                      <step.icon className="w-6 h-6 text-white" />
+                    </div>
+                  </div>
+                  <div className="flex-grow">
+                    <div className="flex items-center space-x-3 mb-2">
+                      <span className="text-lg font-bold text-tech-accent">Step {index + 1}</span>
+                      <h4 className="text-lg font-bold text-white">{step.title}</h4>
+                    </div>
+                    <p className="text-gray-300">{step.description}</p>
+                  </div>
+                </div>
+              </Card>
+            ))}
+          </div>
+
           <div className="space-y-8">
             <div className="bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
@@ -69,36 +89,12 @@ const JoinSection = () => {
                 <p>• Male college students studying Computer Science or related fields</p>
                 <p>• Committed Christians seeking community and growth</p>
                 <p>• Those passionate about using technology for God's glory</p>
-                <p>• Anyone eager to encourage and be encouraged by brothers</p>
               </div>
             </div>
-          </div>
-
-          <div className="space-y-6">
-            <h3 className="text-2xl font-bold text-white text-center mb-6">How to Join</h3>
-            {steps.map((step, index) => (
-              <Card key={index} className="bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-sm border-white/10 p-6 hover:scale-105 transition-transform duration-300">
-                <div className="flex items-center space-x-4">
-                  <div className="flex-shrink-0">
-                    <div className="w-12 h-12 bg-gradient-to-br from-tech-accent to-purple-500 rounded-full flex items-center justify-center">
-                      <step.icon className="w-6 h-6 text-white" />
-                    </div>
-                  </div>
-                  <div className="flex-grow">
-                    <div className="flex items-center space-x-3 mb-2">
-                      <span className="text-lg font-bold text-tech-accent">Step {index + 1}</span>
-                      <h4 className="text-lg font-bold text-white">{step.title}</h4>
-                    </div>
-                    <p className="text-gray-300">{step.description}</p>
-                  </div>
-                </div>
-              </Card>
-            ))}
           </div>
         </div>
 
         <div className="max-w-2xl mx-auto text-center">
-          <div className="bg-gradient-to-br from-tech-accent/10 to-purple-500/10 backdrop-blur-sm rounded-2xl p-8 border border-tech-accent/20 mb-8">
             <Slack className="w-16 h-16 text-tech-accent mx-auto mb-4" />
             <h3 className="text-2xl font-bold text-white mb-4">Ready to Get Started?</h3>
             <p className="text-gray-300 mb-6">
@@ -118,7 +114,6 @@ const JoinSection = () => {
               </Button>
             </a>
           </div>
-        </div>
       </div>
     </section>
   );

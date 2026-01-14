@@ -20,45 +20,7 @@ const BibleStudySection = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-8">
-            <Card className="bg-gradient-to-br from-tech-accent/10 to-purple-500/10 backdrop-blur-sm border-tech-accent/20 p-6">
-              <div className="flex items-center space-x-4 mb-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-tech-accent to-purple-500 rounded-lg flex items-center justify-center">
-                  <Calendar className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-white">Every Sunday</h3>
-                  <p className="text-gray-300">Weekly consistent gathering</p>
-                </div>
-              </div>
-            </Card>
-
-            <Card className="bg-gradient-to-br from-purple-500/10 to-cyan-400/10 backdrop-blur-sm border-purple-500/20 p-6">
-              <div className="flex items-center space-x-4 mb-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-cyan-400 rounded-lg flex items-center justify-center">
-                  <Clock className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-white">5:00 PM EST</h3>
-                  <p className="text-gray-300">Perfect timing for college schedules</p>
-                </div>
-              </div>
-            </Card>
-
-            <Card className="bg-gradient-to-br from-cyan-400/10 to-tech-accent/10 backdrop-blur-sm border-cyan-400/20 p-6">
-              <div className="flex items-center space-x-4 mb-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-cyan-400 to-tech-accent rounded-lg flex items-center justify-center">
-                  <Users className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-white">Interactive Format</h3>
-                  <p className="text-gray-300">Discussion-based, not lecture-style</p>
-                </div>
-              </div>
-            </Card>
-          </div>
-
+        <div className="grid lg:grid-cols-2 gap-12 items-start">
           <div className="space-y-6">
             <div className="bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <div className="flex items-center space-x-3 mb-6">
@@ -103,7 +65,7 @@ const BibleStudySection = () => {
             <div className="bg-gradient-to-r from-tech-accent/20 to-purple-500/20 rounded-xl p-6 border border-tech-accent/30">
               <h4 className="text-lg font-bold text-white mb-3">Current Series</h4>
               <p className="text-gray-300 mb-4">
-                We're reading Acts and discussing how its lessons apply to us as men in the brotherhood. Whether in college or just starting our careers, we all face unique challenges and opportunities to live out our faith.
+                We're currently studying Spiritual Warfare, designed to equip believers to understand, engage, and overcome in the spiritual battles they face daily.
               </p>
               <Button
                 asChild
@@ -114,6 +76,44 @@ const BibleStudySection = () => {
                 </a>
               </Button>
             </div>
+          </div>
+
+          <div className="space-y-11">
+            <Card className="bg-gradient-to-br from-tech-accent/10 to-purple-500/10 backdrop-blur-sm border-tech-accent/20 p-8">
+              <div className="flex items-center space-x-4 mb-4">
+                <div className="w-16 h-16 bg-gradient-to-br from-tech-accent to-purple-500 rounded-lg flex items-center justify-center">
+                  <Calendar className="w-8 h-8 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-white">Every Sunday</h3>
+                  <p className="text-lg text-gray-300">Weekly consistent gathering</p>
+                </div>
+              </div>
+            </Card>
+
+            <Card className="bg-gradient-to-br from-purple-500/10 to-cyan-400/10 backdrop-blur-sm border-purple-500/20 p-8">
+              <div className="flex items-center space-x-4 mb-4">
+                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-cyan-400 rounded-lg flex items-center justify-center">
+                  <Clock className="w-8 h-8 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-white">5:00 PM EST</h3>
+                  <p className="text-lg text-gray-300">Accommodated time for various time zones</p>
+                </div>
+              </div>
+            </Card>
+
+            <Card className="bg-gradient-to-br from-cyan-400/10 to-tech-accent/10 backdrop-blur-sm border-cyan-400/20 p-8">
+              <div className="flex items-center space-x-4 mb-4">
+                <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-tech-accent rounded-lg flex items-center justify-center">
+                  <Users className="w-8 h-8 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-white">Interactive Format</h3>
+                  <p className="text-lg text-gray-300">Discussion-based, not lecture-style</p>
+                </div>
+              </div>
+            </Card>
           </div>
         </div>
       </div>
