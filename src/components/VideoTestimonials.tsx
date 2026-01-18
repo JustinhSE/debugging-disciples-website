@@ -128,14 +128,14 @@ const VideoTestimonials = () => {
   }, [videoId, startPlay, isPlaying]);
 
   useEffect(() => {
-    if (loadedData.length > 3) {
+    if (videoRef.current[videoId]) {
       if (!isPlaying) {
         videoRef.current[videoId]?.pause();
       } else {
         startPlay && videoRef.current[videoId]?.play();
       }
     }
-  }, [startPlay, videoId, isPlaying, loadedData]);
+  }, [startPlay, videoId, isPlaying]);
 
   // Pause all videos and play the current one when videoId changes
   useEffect(() => {
