@@ -22,9 +22,9 @@ const Navigation = () => {
     { label: 'Home', path: '/' },
     { label: 'About', path: '/about' },
     { label: 'Bible Study', path: '/bible-study' },
-    { label: 'Playlist', path: '/playlist' },
+    // { label: 'Playlist', path: '/playlist' },
     { label: 'Testimonials', path: '/testimonials' },
-    { label: 'Join Us', path: '/join' },
+    // { label: 'Join Us', path: '/join' },
   ];
 
   return (

@@ -87,7 +87,7 @@ const JoinSection = () => {
               <h4 className="text-lg font-bold text-white mb-3">Who Can Join?</h4>
               <div className="space-y-2 text-gray-300">
                 <p>• Male college students studying Computer Science or related fields</p>
-                <p>• Committed Christians seeking community and growth</p>
+                <p>• New or devout Christians seeking community and growth</p>
                 <p>• Those passionate about using technology for God's glory</p>
               </div>
             </div>

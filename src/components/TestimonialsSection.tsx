@@ -1,6 +1,7 @@
 import { Card } from '@/components/ui/card';
 import { cn } from "@/lib/utils"
 import { Marquee } from './ui/marquee';
+import { useNavigate } from 'react-router-dom';
 const reviews = [
   {
     name: "James Fei-Baffoe",
@@ -95,6 +96,7 @@ function MarqueeDemo() {
 }
 
 const TestimonialsSection = () => {
+
   return (
     <section id="testimonials" className="py-5 relative">
       <div className="absolute inset-0 bg-gradient-to-b from-tech-dark to-tech-darker"></div>
@@ -105,10 +107,13 @@ const TestimonialsSection = () => {
               What Our Brothers Say
             </span>
           </h2>
-        </div>
+        </div>       
+
+        {/* Text Testimonials Section */}
         <div className="relative flex flex-col items-center justify-center min-h-[300px]">
           <MarqueeDemo />
         </div>
+
       </div>
     </section>
   );

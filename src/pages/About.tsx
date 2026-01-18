@@ -3,6 +3,7 @@ import Navigation from '@/components/Navigation';
 import AboutSection from '@/components/AboutSection';
 import Footer from '@/components/Footer';
 import CompaniesSection from '@/components/CompaniesSection';
+import PlaylistSection from '@/components/PlaylistSection';
 
 const About = () => {
   return (
@@ -12,6 +13,7 @@ const About = () => {
         <AboutSection />
       </div>
       <div >
+        {/* <PlaylistSection /> */}
         {/* <CompaniesSection /> */}
       </div>
       <Footer />

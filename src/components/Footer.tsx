@@ -19,7 +19,7 @@ const Footer = () => {
             </div>
             <p className="text-gray-400 leading-relaxed">
               A Brotherhood of Believers Shaping the Tech World. Connecting
-              Christian men in Computer Science globally through faith,
+              Christian men globally through faith,
               community, and technology.
             </p>
           </div>
