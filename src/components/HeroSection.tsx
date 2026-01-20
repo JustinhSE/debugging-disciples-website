@@ -30,7 +30,7 @@ const HeroSection = () => {
 
           {/* Subtitle */}
           <p className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed">
-            A welcoming, safe space where young Christian men in Computer Science can openly share challenges, 
+            A welcoming, safe space where young Christian men in STEM can openly share challenges, 
             find support, and grow together in faith and tech.
           </p>
 
