@@ -81,13 +81,13 @@ function MarqueeDemo() {
   return (
     <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">
       <Marquee pauseOnHover className="[--duration:25s]">
-        {firstRow.map((review) => (
-          <ReviewCard key={review.name} {...review} />
+        {firstRow.map((review, i) => (
+          <ReviewCard key={`first-${i}`} {...review} />
         ))}
       </Marquee>
       <Marquee reverse pauseOnHover className="[--duration:25s]">
-        {secondRow.map((review) => (
-          <ReviewCard key={review.name} {...review} />
+        {secondRow.map((review, i) => (
+          <ReviewCard key={`second-${i}`} {...review} />
         ))}
       </Marquee>
       <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-tech-dark"></div>
