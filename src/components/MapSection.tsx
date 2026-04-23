@@ -21,28 +21,33 @@ const africanCountries = [
 
 const MapSection = () => {
   const members = [
-    { name: 'Canada', coordinates: [-106.35, 56.13], icon: '🍁', count: '45+', color: '#06b6d4' },
-    { name: 'USA', coordinates: [-95.7129, 37.0902], icon: '🇺🇸', count: '45+', color: '#06b6d4' },
-    { name: 'Africa', coordinates: [22.9375, -8.7832], icon: '🌍', count: '35+', color: '#3b82f6' },
+    { name: 'Canada', coordinates: [-106.35, 56.13], icon: '🍁', count: '45+', color: '#c9a463' },
+    { name: 'USA', coordinates: [-95.7129, 37.0902], icon: '🇺🇸', count: '45+', color: '#c9a463' },
+    { name: 'Africa', coordinates: [22.9375, -8.7832], icon: '🌍', count: '35+', color: '#4677d9' },
   ];
 
   return (
-    <section className="py-20 relative">
-      <div className="absolute inset-0 bg-gradient-to-b from-tech-dark to-tech-darker"></div>
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-4xl mx-auto text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-tech-accent to-purple-400 bg-clip-text text-transparent">
-              Global Community
-            </span>
+    <section className="py-24 relative">
+      <div className="absolute inset-0 bg-gradient-to-b from-tech-darker to-tech-dark" />
+      <div className="container mx-auto px-6 relative z-10">
+
+        {/* Section header */}
+        <div className="max-w-3xl mx-auto text-center mb-14">
+          <div className="flex items-center justify-center gap-4 mb-6">
+            <div className="h-px w-10 bg-gold/40" />
+            <span className="section-label">Reach</span>
+            <div className="h-px w-10 bg-gold/40" />
+          </div>
+          <h2 className="font-display text-4xl md:text-6xl font-light text-mist mb-6 leading-tight">
+            A <span className="italic text-gold">Global</span> Community
           </h2>
-          <p className="text-xl text-gray-300 leading-relaxed">
-            Our brotherhood spans across continents with members in North America, Africa, and beyond. 
-            <br /> No matter where you are, you're part of our worldwide network of Christian technologists.
+          <p className="text-stone text-base leading-relaxed font-sans font-light">
+            Our brotherhood spans across continents with members in North America, Africa, and beyond.
+            No matter where you are, you're part of our worldwide network of Christian technologists.
           </p>
         </div>
 
-        <div className="max-w-5xl mx-auto bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+        <div className="max-w-5xl mx-auto border border-white/8 bg-tech-darker/40 p-6 md:p-8">
           <ComposableMap projection="geoMercator">
             <Geographies geography={geoUrl}>
               {({ geographies }) =>
@@ -59,44 +64,44 @@ const MapSection = () => {
                       style={{
                         default: {
                           fill: isCanada || isUSA 
-                            ? 'rgba(6, 182, 212, 0.2)' 
+                            ? 'rgba(201, 164, 99, 0.15)' 
                             : isAfrica 
-                            ? 'rgba(59, 130, 246, 0.2)' 
-                            : 'rgba(6, 182, 212, 0.05)',
+                            ? 'rgba(70, 119, 217, 0.15)' 
+                            : 'rgba(201, 164, 99, 0.03)',
                           stroke: isCanada || isUSA 
-                            ? 'rgba(6, 182, 212, 0.5)' 
+                            ? 'rgba(201, 164, 99, 0.35)' 
                             : isAfrica 
-                            ? 'rgba(59, 130, 246, 0.5)' 
-                            : 'rgba(6, 182, 212, 0.15)',
+                            ? 'rgba(70, 119, 217, 0.35)' 
+                            : 'rgba(201, 164, 99, 0.1)',
                           strokeWidth: isCanada || isUSA || isAfrica ? 1.5 : 0.75,
                           outline: 'none',
                         },
                         hover: {
                           fill: isCanada || isUSA 
-                            ? 'rgba(6, 182, 212, 0.3)' 
+                            ? 'rgba(201, 164, 99, 0.25)' 
                             : isAfrica 
-                            ? 'rgba(59, 130, 246, 0.3)' 
-                            : 'rgba(6, 182, 212, 0.1)',
+                            ? 'rgba(70, 119, 217, 0.25)' 
+                            : 'rgba(201, 164, 99, 0.06)',
                           stroke: isCanada || isUSA 
-                            ? 'rgba(6, 182, 212, 0.7)' 
+                            ? 'rgba(201, 164, 99, 0.5)' 
                             : isAfrica 
-                            ? 'rgba(59, 130, 246, 0.7)' 
-                            : 'rgba(6, 182, 212, 0.25)',
+                            ? 'rgba(70, 119, 217, 0.5)' 
+                            : 'rgba(201, 164, 99, 0.12)',
                           strokeWidth: isCanada || isUSA || isAfrica ? 2 : 0.75,
                           outline: 'none',
                           cursor: 'pointer',
                         },
                         pressed: {
                           fill: isCanada || isUSA 
-                            ? 'rgba(6, 182, 212, 0.4)' 
+                            ? 'rgba(201, 164, 99, 0.35)' 
                             : isAfrica 
-                            ? 'rgba(59, 130, 246, 0.4)' 
-                            : 'rgba(139, 92, 246, 0.1)',
+                            ? 'rgba(70, 119, 217, 0.35)' 
+                            : 'rgba(201, 164, 99, 0.06)',
                           stroke: isCanada || isUSA 
-                            ? 'rgba(6, 182, 212, 0.8)' 
+                            ? 'rgba(201, 164, 99, 0.6)' 
                             : isAfrica 
-                            ? 'rgba(59, 130, 246, 0.8)' 
-                            : 'rgba(139, 92, 246, 0.3)',
+                            ? 'rgba(70, 119, 217, 0.6)' 
+                            : 'rgba(201, 164, 99, 0.12)',
                           strokeWidth: isCanada || isUSA || isAfrica ? 2 : 0.75,
                           outline: 'none',
                         },

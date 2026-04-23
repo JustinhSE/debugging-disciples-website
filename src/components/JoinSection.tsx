@@ -1,22 +1,23 @@
 
-import { Card } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Slack, MessageSquare, Calendar, CheckCircle } from 'lucide-react';
+import { MessageSquare, Slack, Calendar, CheckCircle } from 'lucide-react';
 
 const JoinSection = () => {
   const steps = [
     {
       icon: MessageSquare,
+      number: '01',
       title: "Complete Application",
       description: "Fill out our simple application form to tell us about yourself and your faith journey."
     },
     {
       icon: Slack,
+      number: '02',
       title: "Join Slack",
       description: "Get invited to our Slack workspace where all the daily conversations and connections happen."
     },
     {
       icon: Calendar,
+      number: '03',
       title: "Attend Bible Study",
       description: "Join us for your first Sunday Bible study and start building meaningful relationships."
     }
@@ -30,62 +31,69 @@ const JoinSection = () => {
   ];
 
   return (
-    <section id="join" className="py-20 relative">
-      <div className="absolute inset-0 bg-gradient-to-b from-tech-darker to-tech-dark"></div>
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-4xl mx-auto text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-tech-accent to-purple-400 bg-clip-text text-transparent">
-              Join Our Brotherhood
-            </span>
+    <section id="join" className="py-24 relative">
+      <div className="absolute inset-0 bg-gradient-to-b from-tech-darker to-tech-dark" />
+      <div className="container mx-auto px-6 relative z-10">
+
+        {/* Section header */}
+        <div className="max-w-3xl mx-auto text-center mb-20">
+          <div className="flex items-center justify-center gap-4 mb-6">
+            <div className="h-px w-10 bg-gold/40" />
+            <span className="section-label">Get Involved</span>
+            <div className="h-px w-10 bg-gold/40" />
+          </div>
+          <h2 className="font-display text-4xl md:text-6xl font-light text-mist mb-6 leading-tight">
+            Join Our <span className="italic text-gold">Brotherhood</span>
           </h2>
-          <p className="text-xl text-gray-300 leading-relaxed">
-            Ready to connect with Christian brothers who share your passion for technology? 
-            <br />Join our growing community of 250 members worldwide.
+          <p className="text-stone text-base md:text-lg leading-relaxed font-sans font-light">
+            Ready to connect with Christian brothers who share your passion for technology?
+            Join our growing community of 250+ members worldwide.
           </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 mb-16">
-          <div className="space-y-6">
+          {/* Steps */}
+          <div className="space-y-4">
             {steps.map((step, index) => (
-              <Card key={index} className="bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-sm border-white/10 p-7 hover:scale-105 transition-transform duration-300">
-                <div className="flex items-center space-x-4">
-                  <div className="flex-shrink-0">
-                    <div className="w-12 h-12 bg-gradient-to-br from-tech-accent to-purple-500 rounded-full flex items-center justify-center">
-                      <step.icon className="w-6 h-6 text-white" />
-                    </div>
-                  </div>
-                  <div className="flex-grow">
-                    <div className="flex items-center space-x-3 mb-2">
-                      <span className="text-lg font-bold text-tech-accent">Step {index + 1}</span>
-                      <h4 className="text-lg font-bold text-white">{step.title}</h4>
-                    </div>
-                    <p className="text-gray-300">{step.description}</p>
+              <div
+                key={index}
+                className="border border-white/8 bg-tech-darker/40 p-7 flex items-start gap-6 hover:border-gold/20 transition-all duration-300 group"
+              >
+                <div className="flex-shrink-0">
+                  <div className="font-display text-3xl font-light text-gold/25 group-hover:text-gold/40 transition-colors duration-300 leading-none">
+                    {step.number}
                   </div>
                 </div>
-              </Card>
+                <div className="flex-grow">
+                  <h4 className="font-display text-xl font-light text-mist mb-2">{step.title}</h4>
+                  <p className="text-stone text-sm leading-relaxed font-sans font-light">{step.description}</p>
+                </div>
+              </div>
             ))}
           </div>
 
-          <div className="space-y-8">
-            <div className="bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-              <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
-                <CheckCircle className="w-8 h-8 text-tech-accent mr-3" />
-                Membership Benefits
-              </h3>
-              <div className="space-y-3">
+          {/* Benefits + Eligibility */}
+          <div className="space-y-6">
+            <div className="border border-white/8 bg-tech-darker/40 p-8">
+              <div className="flex items-center gap-3 mb-6">
+                <CheckCircle className="w-5 h-5 text-gold/60" />
+                <h3 className="font-display text-2xl font-light text-mist">Membership Benefits</h3>
+              </div>
+              <div className="space-y-4">
                 {benefits.map((benefit, index) => (
-                  <div key={index} className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-tech-accent rounded-full mt-2 flex-shrink-0"></div>
-                    <p className="text-gray-300">{benefit}</p>
+                  <div key={index} className="flex items-start gap-4">
+                    <div className="w-1.5 h-1.5 bg-gold rounded-full mt-2 flex-shrink-0 opacity-60" />
+                    <p className="text-stone text-sm leading-relaxed font-sans font-light">{benefit}</p>
                   </div>
                 ))}
               </div>
             </div>
 
-            <div className="bg-gradient-to-r from-tech-accent/20 to-purple-500/20 rounded-xl p-6 border border-tech-accent/30">
-              <h4 className="text-lg font-bold text-white mb-3">Who Can Join?</h4>
-              <div className="space-y-2 text-gray-300">
+            <div className="border border-gold/15 bg-gold/3 p-6">
+              <h4 className="font-sans text-xs tracking-[0.2em] uppercase font-semibold text-gold/70 mb-4">
+                Who Can Join?
+              </h4>
+              <div className="space-y-2 text-stone text-sm font-sans font-light">
                 <p>• Male college students studying Computer Science or related fields</p>
                 <p>• New or devout Christians seeking community and growth</p>
                 <p>• Those passionate about using technology for God's glory</p>
@@ -94,26 +102,29 @@ const JoinSection = () => {
           </div>
         </div>
 
-        <div className="max-w-2xl mx-auto text-center">
-            <Slack className="w-16 h-16 text-tech-accent mx-auto mb-4" />
-            <h3 className="text-2xl font-bold text-white mb-4">Ready to Get Started?</h3>
-            <p className="text-gray-300 mb-6">
-              Click the button below to begin your application. We typically respond within 24-48 hours 
-              and would love to welcome you into our community!
-            </p>
-            <a
-              href="https://forms.gle/6s5EJ1FPXgmyVXsQ7"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Button 
-                size="lg"
-                className="bg-gradient-to-r from-tech-accent to-purple-500 hover:from-tech-accent/80 hover:to-purple-500/80 text-white px-8 py-4 text-lg glow-blue w-full sm:w-auto"
-              >
-                Apply to Join Community
-              </Button>
-            </a>
+        {/* CTA */}
+        <div className="max-w-xl mx-auto text-center border border-white/8 bg-tech-darker/40 p-12">
+          <div className="flex items-center justify-center gap-4 mb-6">
+            <div className="h-px w-10 bg-gold/40" />
+            <Slack className="w-8 h-8 text-gold/60" />
+            <div className="h-px w-10 bg-gold/40" />
           </div>
+          <h3 className="font-display text-2xl md:text-3xl font-light text-mist mb-4">
+            Ready to Get Started?
+          </h3>
+          <p className="text-stone text-sm leading-relaxed font-sans font-light mb-8">
+            Click the button below to begin your application. We typically respond within
+            24–48 hours and would love to welcome you into our community!
+          </p>
+          <a
+            href="https://forms.gle/6s5EJ1FPXgmyVXsQ7"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block px-10 py-3.5 bg-gold text-tech-dark text-xs tracking-[0.2em] uppercase font-sans font-semibold transition-all duration-300 hover:bg-gold-light hover:shadow-[0_0_35px_rgba(201,164,99,0.35)]"
+          >
+            Apply to Join Community
+          </a>
+        </div>
       </div>
     </section>
   );

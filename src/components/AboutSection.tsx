@@ -1,5 +1,4 @@
 
-import { Card } from '@/components/ui/card';
 import { Users, Heart, Code } from 'lucide-react';
 
 const AboutSection = () => {
@@ -7,93 +6,121 @@ const AboutSection = () => {
     {
       icon: Users,
       title: 'Community',
-      description: 'Building meaningful connections among Christian men in tech, fostering authentic brotherhood that moves past the surface.',
+      description:
+        'Building meaningful connections among Christian men in tech, fostering authentic brotherhood that moves past the surface.',
     },
     {
       icon: Heart,
       title: 'Encouragement',
-      description: 'Creating a safe space where members can openly share challenges and receive genuine support and prayer.',
+      description:
+        'Creating a safe space where members can openly share challenges and receive genuine support and prayer.',
     },
     {
       icon: Code,
       title: 'Excellence',
-      description: 'Pursuing excellence in both our technical skills and our walk with Christ, growing in wisdom and integrity.',
+      description:
+        'Pursuing excellence in both our technical skills and our walk with Christ, growing in wisdom and integrity.',
     },
   ];
 
+  const stats = [
+    { value: '250+', label: 'Members', color: 'text-gold' },
+    { value: '24/7', label: 'Support', color: 'text-sapphire' },
+    { value: 'Global', label: 'Community', color: 'text-gold' },
+  ];
+
   return (
-    <section id="about" className="py-20 relative">
-      <div className="absolute inset-0 bg-gradient-to-b from-tech-darker to-tech-dark"></div>
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-4xl mx-auto text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-tech-accent to-purple-400 bg-clip-text text-transparent">
-              About Debugging Disciples
-            </span>
+    <section id="about" className="py-24 relative">
+      <div className="absolute inset-0 bg-gradient-to-b from-tech-darker to-tech-dark" />
+      <div className="container mx-auto px-6 relative z-10">
+
+        {/* Section header */}
+        <div className="max-w-3xl mx-auto text-center mb-20">
+          <div className="flex items-center justify-center gap-4 mb-6">
+            <div className="h-px w-10 bg-gold/40" />
+            <span className="section-label">Our Story</span>
+            <div className="h-px w-10 bg-gold/40" />
+          </div>
+          <h2 className="font-display text-4xl md:text-6xl font-light text-mist mb-6 leading-tight">
+            About Debugging
+            <span className="italic text-gold"> Disciples</span>
           </h2>
-          <p className="text-xl text-gray-300 leading-relaxed">
-            Founded in February 2024, we've grown into a global community of Christian men 
-            pursuing STEM careers. Our mission is simple: to provide a place where faith and 
-            technology intersect, where brotherhood flourishes, and where each member is encouraged 
-            to become the man God has called him to be.
+          <p className="text-stone text-base md:text-lg leading-relaxed font-sans font-light">
+            Founded in February 2024, we've grown into a global community of Christian men pursuing
+            STEM careers. Our mission: a place where faith and technology intersect, where brotherhood
+            flourishes, and where each member is encouraged to become the man God has called him to be.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
+        {/* Story + Stats grid */}
+        <div className="grid md:grid-cols-2 gap-16 items-center mb-20">
           <div className="space-y-6">
-            <h3 className="text-3xl font-bold text-white mb-4">Our Story</h3>
-            <p className="text-gray-300 leading-relaxed">
-              What started as a small group of friends sharing their faith and passion for technology 
-              has grown into a thriving global community. We recognized the unique challenges that 
+            <h3 className="font-display text-2xl md:text-3xl font-light text-mist">Our Story</h3>
+            <p className="text-stone text-sm leading-relaxed font-sans font-light">
+              What started as a small group of friends sharing their faith and passion for technology
+              has grown into a thriving global community. We recognized the unique challenges that
               Christian men face in the tech industry and decided to create something different.
             </p>
-            <p className="text-gray-300 leading-relaxed">
-              Through our online platform on Slack, we've built bridges across continents, connecting 
-              brothers from different universities, companies, and backgrounds, all united by our 
+            <p className="text-stone text-sm leading-relaxed font-sans font-light">
+              Through our online platform on Slack, we've built bridges across continents, connecting
+              brothers from different universities, companies, and backgrounds — all united by our
               shared faith and love for technology.
             </p>
-            <div className="flex items-center space-x-4 pt-4">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-tech-accent">250</div>
-                <div className="text-sm text-gray-400">Members</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-purple-400">24/7</div>
-                <div className="text-sm text-gray-400">Support</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-cyan-400">Global</div>
-                <div className="text-sm text-gray-400">Community</div>
-              </div>
+            {/* Stats row */}
+            <div className="flex items-center gap-10 pt-4 border-t border-white/8">
+              {stats.map((stat) => (
+                <div key={stat.label} className="text-center">
+                  <div className={`font-display text-3xl font-light ${stat.color}`}>{stat.value}</div>
+                  <div className="text-stone text-xs tracking-[0.15em] uppercase font-sans mt-1">
+                    {stat.label}
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
-          
+
           <div className="relative">
-            <div className="bg-gradient-to-br from-tech-accent/20 to-purple-500/20 rounded-2xl p-8 backdrop-blur-sm border border-white/10">
+            <div className="border border-white/8 rounded-sm p-8 bg-tech-darker/60">
               <div className="grid grid-cols-2 gap-4">
-                <div className="h-24 bg-gradient-to-br from-tech-accent/30 to-transparent rounded-lg"></div>
-                <div className="h-24 bg-gradient-to-br from-purple-500/30 to-transparent rounded-lg"></div>
-                <div className="h-24 bg-gradient-to-br from-cyan-400/30 to-transparent rounded-lg"></div>
-                <div className="h-24 bg-gradient-to-br from-tech-accent/30 to-transparent rounded-lg"></div>
+                <div className="h-24 border border-gold/10 bg-gold/3 rounded-sm flex items-center justify-center">
+                  <div className="w-px h-8 bg-gold/20" />
+                </div>
+                <div className="h-24 border border-sapphire/10 bg-sapphire/3 rounded-sm flex items-center justify-center">
+                  <div className="w-8 h-px bg-sapphire/20" />
+                </div>
+                <div className="h-24 border border-sapphire/10 bg-sapphire/3 rounded-sm flex items-center justify-center">
+                  <div className="w-8 h-px bg-sapphire/20" />
+                </div>
+                <div className="h-24 border border-gold/10 bg-gold/3 rounded-sm flex items-center justify-center">
+                  <div className="w-px h-8 bg-gold/20" />
+                </div>
               </div>
-              <div className="mt-4 text-center">
-                <p className="text-sm text-gray-400 font-mono">// Building community through code and faith</p>
+              <div className="mt-5 text-center">
+                <p className="text-xs text-stone/50 font-mono">
+                  // Building community through code and faith
+                </p>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        {/* Values cards */}
+        <div className="grid md:grid-cols-3 gap-6">
           {values.map((value, index) => (
-            <Card key={index} className="bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border-white/10 p-6 hover:scale-105 transition-transform duration-300">
-              <div className="flex flex-col items-center text-center space-y-4">
-                <div className="w-16 h-16 bg-gradient-to-br from-tech-accent to-purple-500 rounded-full flex items-center justify-center">
-                  <value.icon className="w-8 h-8 text-white" />
+            <div
+              key={index}
+              className="border border-white/8 bg-tech-darker/40 p-8 hover:border-gold/25 transition-all duration-300 group"
+            >
+              <div className="flex flex-col items-start space-y-4">
+                <div className="w-10 h-10 border border-gold/30 flex items-center justify-center group-hover:border-gold/60 transition-colors duration-300">
+                  <value.icon className="w-5 h-5 text-gold/70 group-hover:text-gold transition-colors duration-300" />
                 </div>
-                <h3 className="text-xl font-bold text-white">{value.title}</h3>
-                <p className="text-gray-300 leading-relaxed">{value.description}</p>
+                <h3 className="font-display text-xl font-light text-mist">{value.title}</h3>
+                <p className="text-stone text-sm leading-relaxed font-sans font-light">
+                  {value.description}
+                </p>
               </div>
-            </Card>
+            </div>
           ))}
         </div>
       </div>

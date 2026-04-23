@@ -1,119 +1,100 @@
 
-import { Card } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
 import { Calendar, Clock, Users, Book } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const BibleStudySection = () => {
+  const expectations = [
+    { color: 'bg-gold', label: 'Opening Prayer', desc: 'We begin each session centering our hearts on God' },
+    { color: 'bg-sapphire', label: 'Scripture Reading', desc: 'We dive deep into God\'s Word together' },
+    { color: 'bg-gold', label: 'Group Discussion', desc: 'Share insights and ask questions in a safe space' },
+    { color: 'bg-sapphire', label: 'Application', desc: 'Connect biblical truths to our daily lives in tech' },
+    { color: 'bg-gold', label: 'Closing Prayer', desc: 'Lift up concerns and pray for one another' },
+  ];
+
+  const schedule = [
+    { icon: Calendar, title: 'Every Sunday', subtitle: 'Weekly consistent gathering' },
+    { icon: Clock, title: '5:00 PM EST', subtitle: 'Accommodated for various time zones' },
+    { icon: Users, title: 'Interactive', subtitle: 'Discussion-based, not lecture-style' },
+  ];
+
   return (
-    <section id="bible-study" className="py-20 relative">
-      <div className="absolute inset-0 bg-gradient-to-b from-tech-dark to-tech-darker"></div>
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-4xl mx-auto text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-tech-accent to-purple-400 bg-clip-text text-transparent">
-              Weekly Bible Study
-            </span>
+    <section id="bible-study" className="py-24 relative">
+      <div className="absolute inset-0 bg-gradient-to-b from-tech-dark to-tech-darker" />
+      <div className="container mx-auto px-6 relative z-10">
+
+        {/* Section header */}
+        <div className="max-w-3xl mx-auto text-center mb-20">
+          <div className="flex items-center justify-center gap-4 mb-6">
+            <div className="h-px w-10 bg-gold/40" />
+            <span className="section-label">Scripture & Fellowship</span>
+            <div className="h-px w-10 bg-gold/40" />
+          </div>
+          <h2 className="font-display text-4xl md:text-6xl font-light text-mist mb-6 leading-tight">
+            Weekly <span className="italic text-gold">Bible Study</span>
           </h2>
-          <p className="text-xl text-gray-300 leading-relaxed">
-            Join us every Sunday for an engaging Bible study designed to deepen our faith, 
+          <p className="text-stone text-base md:text-lg leading-relaxed font-sans font-light">
+            Join us every Sunday for an engaging Bible study designed to deepen our faith,
             explore God's Word together, and apply biblical principles to our lives in tech.
           </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-start">
+          {/* What to Expect */}
           <div className="space-y-6">
-            <div className="bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-              <div className="flex items-center space-x-3 mb-6">
-                <Book className="w-8 h-8 text-tech-accent" />
-                <h3 className="text-2xl font-bold text-white">What to Expect</h3>
+            <div className="border border-white/8 bg-tech-darker/40 p-8">
+              <div className="flex items-center gap-3 mb-8">
+                <Book className="w-5 h-5 text-gold/70" />
+                <h3 className="font-display text-2xl font-light text-mist">What to Expect</h3>
               </div>
-              
-              <div className="space-y-4">
-                <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-tech-accent rounded-full mt-2 flex-shrink-0"></div>
-                  <p className="text-gray-300">
-                    <strong className="text-white">Opening Prayer:</strong> We begin each session centering our hearts on God
-                  </p>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
-                  <p className="text-gray-300">
-                    <strong className="text-white">Scripture Reading:</strong> We dive deep into God's Word together
-                  </p>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-cyan-400 rounded-full mt-2 flex-shrink-0"></div>
-                  <p className="text-gray-300">
-                    <strong className="text-white">Group Discussion:</strong> Share insights and ask questions in a safe space
-                  </p>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-tech-accent rounded-full mt-2 flex-shrink-0"></div>
-                  <p className="text-gray-300">
-                    <strong className="text-white">Application:</strong> Connect biblical truths to our daily lives in tech
-                  </p>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
-                  <p className="text-gray-300">
-                    <strong className="text-white">Closing Prayer:</strong> Lift up concerns and pray for one another
-                  </p>
-                </div>
+              <div className="space-y-5">
+                {expectations.map((item, i) => (
+                  <div key={i} className="flex items-start gap-4">
+                    <div className={`w-1.5 h-1.5 ${item.color} rounded-full mt-2 flex-shrink-0 opacity-70`} />
+                    <p className="text-stone text-sm leading-relaxed font-sans font-light">
+                      <strong className="text-mist/80 font-medium">{item.label}:</strong>{' '}
+                      {item.desc}
+                    </p>
+                  </div>
+                ))}
               </div>
             </div>
 
-            <div className="bg-gradient-to-r from-tech-accent/20 to-purple-500/20 rounded-xl p-6 border border-tech-accent/30">
-              <h4 className="text-lg font-bold text-white mb-3">Current Series</h4>
-              <p className="text-gray-300 mb-4">
-                We're currently studying Spiritual Warfare, designed to equip believers to understand, engage, and overcome in the spiritual battles they face daily.
+            {/* Current Series */}
+            <div className="border border-gold/20 bg-gold/3 p-6">
+              <h4 className="font-sans text-xs tracking-[0.2em] uppercase font-semibold text-gold/80 mb-3">
+                Current Series
+              </h4>
+              <p className="text-stone text-sm leading-relaxed font-sans font-light mb-5">
+                We're currently studying{' '}
+                <span className="text-mist/80 font-medium">Spiritual Warfare</span>, designed to
+                equip believers to understand, engage, and overcome in the spiritual battles they
+                face daily.
               </p>
-              <Button
-                asChild
-                className="bg-gradient-to-r from-tech-accent to-purple-500 hover:from-tech-accent/80 hover:to-purple-500/80 text-white"
+              <Link
+                to="/join"
+                className="inline-block px-6 py-2.5 bg-gold text-tech-dark text-xs tracking-[0.2em] uppercase font-sans font-semibold transition-all duration-300 hover:bg-gold-light hover:shadow-[0_0_25px_rgba(201,164,99,0.3)]"
               >
-                <a href="/join">
-                  Join This Sunday
-                </a>
-              </Button>
+                Join This Sunday
+              </Link>
             </div>
           </div>
 
-          <div className="space-y-11">
-            <Card className="bg-gradient-to-br from-tech-accent/10 to-purple-500/10 backdrop-blur-sm border-tech-accent/20 p-8">
-              <div className="flex items-center space-x-4 mb-4">
-                <div className="w-16 h-16 bg-gradient-to-br from-tech-accent to-purple-500 rounded-lg flex items-center justify-center">
-                  <Calendar className="w-8 h-8 text-white" />
+          {/* Schedule cards */}
+          <div className="space-y-4">
+            {schedule.map((item, i) => (
+              <div
+                key={i}
+                className="border border-white/8 bg-tech-darker/40 p-7 flex items-center gap-6 hover:border-gold/20 transition-all duration-300 group"
+              >
+                <div className="w-14 h-14 border border-gold/25 flex items-center justify-center flex-shrink-0 group-hover:border-gold/50 transition-colors duration-300">
+                  <item.icon className="w-6 h-6 text-gold/60 group-hover:text-gold/80 transition-colors duration-300" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-white">Every Sunday</h3>
-                  <p className="text-lg text-gray-300">Weekly consistent gathering</p>
+                  <h3 className="font-display text-2xl font-light text-mist">{item.title}</h3>
+                  <p className="text-stone text-sm font-sans font-light mt-1">{item.subtitle}</p>
                 </div>
               </div>
-            </Card>
-
-            <Card className="bg-gradient-to-br from-purple-500/10 to-cyan-400/10 backdrop-blur-sm border-purple-500/20 p-8">
-              <div className="flex items-center space-x-4 mb-4">
-                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-cyan-400 rounded-lg flex items-center justify-center">
-                  <Clock className="w-8 h-8 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold text-white">5:00 PM EST</h3>
-                  <p className="text-lg text-gray-300">Accommodated time for various time zones</p>
-                </div>
-              </div>
-            </Card>
-
-            <Card className="bg-gradient-to-br from-cyan-400/10 to-tech-accent/10 backdrop-blur-sm border-cyan-400/20 p-8">
-              <div className="flex items-center space-x-4 mb-4">
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-tech-accent rounded-lg flex items-center justify-center">
-                  <Users className="w-8 h-8 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold text-white">Interactive Format</h3>
-                  <p className="text-lg text-gray-300">Discussion-based, not lecture-style</p>
-                </div>
-              </div>
-            </Card>
+            ))}
           </div>
         </div>
       </div>
