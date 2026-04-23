@@ -24,7 +24,7 @@ const HeroSection = () => {
       <div className="container mx-auto px-6 text-center relative z-10">
         <div className="max-w-4xl mx-auto">
           {/* Label */}
-          <div className="flex items-center justify-center gap-4 mb-10">
+          <div className="flex items-center justify-center gap-4 mt-8 mb-10">
             <div className="h-px w-10 bg-gold/40" />
             <span className="section-label">Christian Men in STEM</span>
             <div className="h-px w-10 bg-gold/40" />
