@@ -50,7 +50,7 @@ const Navigation = () => {
               <Link
                 key={item.path}
                 to={item.path}
-                className={`relative text-xs tracking-[0.15em] uppercase font-sans font-medium transition-colors duration-300 group ${
+                className={`relative text-xs tracking-[0.15em] uppercase font-sans font-medium transition-colors duration-300 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold/70 focus-visible:rounded-sm ${
                   location.pathname === item.path
                     ? 'text-gold'
                     : 'text-stone hover:text-mist'
@@ -68,7 +68,7 @@ const Navigation = () => {
             ))}
             <Link
               to="/join"
-              className="px-5 py-2 border border-gold/50 text-gold text-xs tracking-[0.15em] uppercase font-sans font-medium transition-all duration-300 hover:bg-gold hover:text-tech-dark hover:border-gold"
+              className="px-5 py-2 border border-gold/50 text-gold text-xs tracking-[0.15em] uppercase font-sans font-medium transition-all duration-300 hover:bg-gold hover:text-tech-dark hover:border-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold/70"
             >
               Join Community
             </Link>
@@ -76,7 +76,7 @@ const Navigation = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-stone hover:text-mist transition-colors p-1"
+            className="md:hidden text-stone hover:text-mist transition-colors p-2.5 -mr-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold/70 focus-visible:rounded-sm"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -93,7 +93,7 @@ const Navigation = () => {
                   key={item.path}
                   to={item.path}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className={`block text-xs tracking-[0.2em] uppercase font-sans font-medium py-1 transition-colors duration-200 ${
+                  className={`block text-xs tracking-[0.2em] uppercase font-sans font-medium py-3 transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold/70 focus-visible:rounded-sm ${
                     location.pathname === item.path ? 'text-gold' : 'text-stone hover:text-mist'
                   }`}
                 >
@@ -103,7 +103,7 @@ const Navigation = () => {
               <Link
                 to="/join"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="block w-full text-center px-5 py-2.5 border border-gold/50 text-gold text-xs tracking-[0.2em] uppercase font-sans font-medium transition-all duration-300 hover:bg-gold hover:text-tech-dark"
+                className="block w-full text-center px-5 py-3 border border-gold/50 text-gold text-xs tracking-[0.2em] uppercase font-sans font-medium transition-all duration-300 hover:bg-gold hover:text-tech-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold/70"
               >
                 Join Community
               </Link>
