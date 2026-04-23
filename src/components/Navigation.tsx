@@ -1,7 +1,6 @@
 
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
 
 const Navigation = () => {
@@ -13,7 +12,6 @@ const Navigation = () => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -22,86 +20,93 @@ const Navigation = () => {
     { label: 'Home', path: '/' },
     { label: 'About', path: '/about' },
     { label: 'Bible Study', path: '/bible-study' },
-    // { label: 'Playlist', path: '/playlist' },
     { label: 'Testimonials', path: '/testimonials' },
-    // { label: 'Join Us', path: '/join' },
   ];
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all-smooth ${
-      isScrolled ? 'bg-tech-dark/90 backdrop-blur-md border-b border-white/10' : 'bg-transparent'
-    }`}>
-      <div className="container mx-auto px-4 py-4">
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        isScrolled
+          ? 'bg-tech-dark/95 backdrop-blur-md border-b border-white/8'
+          : 'bg-transparent'
+      }`}
+    >
+      <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <Link to="/" className="flex items-center space-x-3">
-            <img 
-              src="/lovable-uploads/1fcf16d5-8905-450b-831c-aa468ed64619.png" 
-              alt="Debugging Disciples Logo" 
-              className="w-10 h-10 object-contain"
+          <Link to="/" className="flex items-center gap-3 group">
+            <img
+              src="/lovable-uploads/1fcf16d5-8905-450b-831c-aa468ed64619.png"
+              alt="Debugging Disciples Logo"
+              className="w-9 h-9 object-contain"
             />
-            <span className="text-xl font-bold bg-gradient-to-r from-brand-cyan to-brand-purple bg-clip-text text-transparent">
+            <span className="font-display text-lg font-light tracking-wide text-mist group-hover:text-gold transition-colors duration-300">
               Debugging Disciples
             </span>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center gap-8">
             {navItems.map((item) => (
               <Link
                 key={item.path}
                 to={item.path}
-                className={`text-gray-300 hover:text-brand-cyan transition-colors relative group ${
-                  location.pathname === item.path ? 'text-brand-cyan' : ''
+                className={`relative text-xs tracking-[0.15em] uppercase font-sans font-medium transition-colors duration-300 group ${
+                  location.pathname === item.path
+                    ? 'text-gold'
+                    : 'text-stone hover:text-mist'
                 }`}
               >
                 {item.label}
-                <span className={`absolute inset-x-0 -bottom-1 h-0.5 bg-brand-cyan transition-transform origin-left ${
-                  location.pathname === item.path ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
-                }`}></span>
+                <span
+                  className={`absolute inset-x-0 -bottom-1 h-px bg-gold transition-transform duration-300 origin-left ${
+                    location.pathname === item.path
+                      ? 'scale-x-100'
+                      : 'scale-x-0 group-hover:scale-x-100'
+                  }`}
+                />
               </Link>
             ))}
-            <Button 
-              asChild
-              className="bg-gradient-to-r from-brand-cyan to-brand-purple hover:from-brand-cyan/80 hover:to-brand-purple/80 text-white"
+            <Link
+              to="/join"
+              className="px-5 py-2 border border-gold/50 text-gold text-xs tracking-[0.15em] uppercase font-sans font-medium transition-all duration-300 hover:bg-gold hover:text-tech-dark hover:border-gold"
             >
-              <Link to="/join">Join Community</Link>
-            </Button>
+              Join Community
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
-          <Button
-            variant="ghost"
-            size="icon"
-            className="md:hidden text-white"
+          <button
+            className="md:hidden text-stone hover:text-mist transition-colors p-1"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label="Toggle menu"
           >
-            {isMobileMenuOpen ? <X /> : <Menu />}
-          </Button>
+            {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+          </button>
         </div>
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="md:hidden absolute top-full left-0 right-0 bg-tech-dark/95 backdrop-blur-md border-b border-white/10">
-            <div className="container mx-auto px-4 py-4 space-y-4">
+          <div className="md:hidden absolute top-full left-0 right-0 bg-tech-dark/98 backdrop-blur-md border-b border-white/8">
+            <div className="container mx-auto px-6 py-6 space-y-5">
               {navItems.map((item) => (
                 <Link
                   key={item.path}
                   to={item.path}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className={`block w-full text-left text-gray-300 hover:text-brand-cyan transition-colors py-2 ${
-                    location.pathname === item.path ? 'text-brand-cyan' : ''
+                  className={`block text-xs tracking-[0.2em] uppercase font-sans font-medium py-1 transition-colors duration-200 ${
+                    location.pathname === item.path ? 'text-gold' : 'text-stone hover:text-mist'
                   }`}
                 >
                   {item.label}
                 </Link>
               ))}
-              <Button 
-                asChild
-                className="w-full bg-gradient-to-r from-brand-cyan to-brand-purple hover:from-brand-cyan/80 hover:to-brand-purple/80 text-white"
+              <Link
+                to="/join"
                 onClick={() => setIsMobileMenuOpen(false)}
+                className="block w-full text-center px-5 py-2.5 border border-gold/50 text-gold text-xs tracking-[0.2em] uppercase font-sans font-medium transition-all duration-300 hover:bg-gold hover:text-tech-dark"
               >
-                <Link to="/join">Join Community</Link>
-              </Button>
+                Join Community
+              </Link>
             </div>
           </div>
         )}

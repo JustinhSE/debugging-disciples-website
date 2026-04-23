@@ -62,15 +62,20 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Updated tech nighttime theme colors to match your logo
-				'tech-dark': '#000000',
-				'tech-darker': '#0a0a0a',
-				'tech-blue': '#3b82f6',
-				'tech-purple': '#8b5cf6',
-				'tech-cyan': '#06b6d4',
-				'tech-accent': '#06b6d4', // Changed to cyan to match logo
-				'brand-cyan': '#06b6d4',
-				'brand-purple': '#8b5cf6',
+				// Deep midnight theme - Sacred Craft aesthetic
+				'tech-dark': '#080b14',
+				'tech-darker': '#050710',
+				'tech-blue': '#4677d9',
+				'tech-purple': '#1e3a8a',
+				'tech-cyan': '#c9a463',
+				'tech-accent': '#c9a463', // Warm gold
+				'brand-cyan': '#c9a463',  // Warm gold
+				'brand-purple': '#4677d9',
+				'gold': '#c9a463',
+				'gold-light': '#e5c987',
+				'sapphire': '#4677d9',
+				'mist': '#edeae2',
+				'stone': '#9fa3af',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -78,8 +83,9 @@ export default {
 				sm: 'calc(var(--radius) - 4px)'
 			},
 			fontFamily: {
-				sans: ['Inter', 'sans-serif'],
-				mono: ['JetBrains Mono', 'monospace']
+				sans: ['Sora', 'sans-serif'],
+				display: ['Cormorant Garamond', 'serif'],
+				mono: ['Fira Code', 'JetBrains Mono', 'monospace']
 			},
 			keyframes: {
 				'accordion-down': {
@@ -142,7 +148,7 @@ export default {
 			backgroundImage: {
 				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
 				'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-				'tech-gradient': 'linear-gradient(135deg, #06b6d4 0%, #8b5cf6 50%, #3b82f6 100%)',
+				'tech-gradient': 'linear-gradient(135deg, #c9a463 0%, #4677d9 50%, #1e3a8a 100%)',
 			}
 		}
 	},

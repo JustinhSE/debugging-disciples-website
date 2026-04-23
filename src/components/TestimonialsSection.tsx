@@ -1,12 +1,11 @@
-import { Card } from '@/components/ui/card';
 import { cn } from "@/lib/utils"
 import { Marquee } from './ui/marquee';
-import { useNavigate } from 'react-router-dom';
+
 const reviews = [
   {
     name: "James Fei-Baffoe",
     title: "Junior Computer Science Student",
-    body: "It’s been a blessing to be a part of this community!",
+    body: "It's been a blessing to be a part of this community!",
     img: "https://avatar.vercel.sh/jill",
   },
   {
@@ -18,7 +17,7 @@ const reviews = [
   {
     name: "Zaire Meachem",
     title: "Data Scientist",
-    body: "It’s an incredible space to communicate, discuss, and connect with like minded people.",
+    body: "It's an incredible space to communicate, discuss, and connect with like minded people.",
     img: "https://avatar.vercel.sh/jane",
   },
   {
@@ -36,7 +35,7 @@ const reviews = [
   {
     name: "Sujar Henry",
     title: "Senior Computer Science Student",
-    body: "Super grateful to God to be a part of this community, it’s been an awesome time!",
+    body: "Super grateful to God to be a part of this community, it's been an awesome time!",
     img: "https://avatar.vercel.sh/james",
   },
 ]
@@ -58,20 +57,22 @@ const ReviewCard = ({
   return (
     <figure
       className={cn(
-        "relative h-full w-64 cursor-pointer overflow-hidden rounded-xl border p-4",
-        "border-gray-50/[.1] bg-gray-50/[.10] hover:bg-gray-50/[.15]"
+        "relative h-full w-72 cursor-pointer overflow-hidden border p-6",
+        "border-white/8 bg-tech-darker/60 hover:border-gold/25 transition-all duration-300"
       )}
     >
-      <div className="flex flex-row items-center gap-2">
-        <img className="rounded-full" width="32" height="32" alt="" src={img} />
+      <div className="flex flex-row items-center gap-3 mb-4">
+        <img className="rounded-full" width="36" height="36" alt="" src={img} />
         <div className="flex flex-col">
-          <figcaption className="text-sm font-medium dark:text-white">
+          <figcaption className="text-sm font-medium text-mist font-sans">
             {name}
           </figcaption>
-          <p className="text-xs font-medium dark:text-white/40">{title}</p>
+          <p className="text-xs font-light text-stone/70 font-sans">{title}</p>
         </div>
       </div>
-      <blockquote className="mt-2 text-sm">{body}</blockquote>
+      <blockquote className="text-sm text-stone/80 leading-relaxed font-sans font-light">
+        "{body}"
+      </blockquote>
     </figure>
   )
 }
@@ -79,41 +80,41 @@ const ReviewCard = ({
 function MarqueeDemo() {
   return (
     <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">
-      <Marquee pauseOnHover className="[--duration:20s]">
+      <Marquee pauseOnHover className="[--duration:25s]">
         {firstRow.map((review) => (
-          <ReviewCard key={review.title} {...review} />
+          <ReviewCard key={review.name} {...review} />
         ))}
       </Marquee>
-      <Marquee reverse pauseOnHover className="[--duration:20s]">
+      <Marquee reverse pauseOnHover className="[--duration:25s]">
         {secondRow.map((review) => (
-          <ReviewCard key={review.title} {...review} />
+          <ReviewCard key={review.name} {...review} />
         ))}
       </Marquee>
-      <div className="from-background pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r"></div>
-      <div className="from-background pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l"></div>
+      <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-tech-dark"></div>
+      <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-tech-dark"></div>
     </div>
   )
 }
 
 const TestimonialsSection = () => {
-
   return (
-    <section id="testimonials" className="py-5 relative">
-      <div className="absolute inset-0 bg-gradient-to-b from-tech-dark to-tech-darker"></div>
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-4xl mx-auto text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-tech-accent to-purple-400 bg-clip-text text-transparent">
-              What Our Brothers Say
-            </span>
+    <section id="testimonials" className="py-24 relative">
+      <div className="absolute inset-0 bg-gradient-to-b from-tech-dark to-tech-darker" />
+      <div className="container mx-auto px-6 relative z-10">
+        <div className="max-w-3xl mx-auto text-center mb-16">
+          <div className="flex items-center justify-center gap-4 mb-6">
+            <div className="h-px w-10 bg-gold/40" />
+            <span className="section-label">Testimonials</span>
+            <div className="h-px w-10 bg-gold/40" />
+          </div>
+          <h2 className="font-display text-4xl md:text-6xl font-light text-mist leading-tight">
+            What Our <span className="italic text-gold">Brothers</span> Say
           </h2>
-        </div>       
+        </div>
 
-        {/* Text Testimonials Section */}
         <div className="relative flex flex-col items-center justify-center min-h-[300px]">
           <MarqueeDemo />
         </div>
-
       </div>
     </section>
   );
