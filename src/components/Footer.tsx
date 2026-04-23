@@ -63,27 +63,27 @@ const Footer = () => {
                 href="https://open.spotify.com/playlist/5P9bF29n4iwEQPR7PmO02i"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 text-stone text-sm hover:text-gold transition-colors duration-200 font-sans font-light group"
+                className="flex items-center gap-3 text-stone text-sm hover:text-gold transition-colors duration-200 font-sans font-light group py-2 -my-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold/70 focus-visible:rounded-sm"
               >
-                <Music className="w-4 h-4 opacity-60 group-hover:opacity-100 transition-opacity" />
+                <Music className="w-4 h-4 opacity-60 group-hover:opacity-100 transition-opacity" aria-hidden="true" />
                 <span>Our Playlist</span>
               </a>
               <a
                 href="https://forms.gle/6s5EJ1FPXgmyVXsQ7"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 text-stone text-sm hover:text-gold transition-colors duration-200 font-sans font-light group"
+                className="flex items-center gap-3 text-stone text-sm hover:text-gold transition-colors duration-200 font-sans font-light group py-2 -my-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold/70 focus-visible:rounded-sm"
               >
-                <Slack className="w-4 h-4 opacity-60 group-hover:opacity-100 transition-opacity" />
+                <Slack className="w-4 h-4 opacity-60 group-hover:opacity-100 transition-opacity" aria-hidden="true" />
                 <span>Slack Community</span>
               </a>
               <a
                 href="https://www.linkedin.com/company/debuggingdisciples/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 text-stone text-sm hover:text-gold transition-colors duration-200 font-sans font-light group"
+                className="flex items-center gap-3 text-stone text-sm hover:text-gold transition-colors duration-200 font-sans font-light group py-2 -my-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold/70 focus-visible:rounded-sm"
               >
-                <Mail className="w-4 h-4 opacity-60 group-hover:opacity-100 transition-opacity" />
+                <Mail className="w-4 h-4 opacity-60 group-hover:opacity-100 transition-opacity" aria-hidden="true" />
                 <span>Contact Us</span>
               </a>
             </div>
@@ -92,10 +92,10 @@ const Footer = () => {
 
         <div className="border-t border-white/8 pt-8">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
-            <p className="text-stone/60 text-xs font-sans font-light tracking-wide">
+            <p className="text-stone/80 text-xs font-sans font-light tracking-wide">
               © 2024 Debugging Disciples. All rights reserved.
             </p>
-            <div className="flex items-center gap-2 text-stone/60 text-xs font-sans font-light">
+            <div className="flex items-center gap-2 text-stone/80 text-xs font-sans font-light">
               <span>Made with</span>
               <Heart className="w-3.5 h-3.5 text-gold/70" />
               <span>for the Kingdom</span>
