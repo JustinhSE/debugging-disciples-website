@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 const HeroSection = () => {
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
       {/* Background */}
       <div className="absolute inset-0 bg-tech-dark">
         <div
