@@ -26,7 +26,7 @@ const HeroSection = () => {
         <div className="max-w-4xl mx-auto">
           {/* Label */}
           <motion.div
-            className="flex items-center justify-center gap-4 mb-10"
+            className="flex items-center justify-center gap-4 mt-8 mb-10"
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: 'easeOut' }}
