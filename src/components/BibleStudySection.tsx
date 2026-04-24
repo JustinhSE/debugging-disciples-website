@@ -5,11 +5,11 @@ import FadeIn from './FadeIn';
 
 const BibleStudySection = () => {
   const expectations = [
-    { color: 'bg-gold', label: 'Opening Prayer', desc: 'We begin each session centering our hearts on God' },
-    { color: 'bg-sapphire', label: 'Scripture Reading', desc: 'We dive deep into God\'s Word together' },
-    { color: 'bg-gold', label: 'Group Discussion', desc: 'Share insights and ask questions in a safe space' },
-    { color: 'bg-sapphire', label: 'Application', desc: 'Connect biblical truths to our daily lives in tech' },
-    { color: 'bg-gold', label: 'Closing Prayer', desc: 'Lift up concerns and pray for one another' },
+    { label: 'Opening Prayer', desc: 'We begin each session centering our hearts on God' },
+    { label: 'Scripture Reading', desc: "We dive deep into God's Word together" },
+    { label: 'Group Discussion', desc: 'Share insights and ask questions in a safe space' },
+    { label: 'Application', desc: 'Connect biblical truths to our daily lives in tech' },
+    { label: 'Closing Prayer', desc: 'Lift up concerns and pray for one another' },
   ];
 
   const schedule = [
@@ -25,7 +25,7 @@ const BibleStudySection = () => {
 
         {/* Section header */}
         <FadeIn>
-          <div className="max-w-3xl mx-auto text-center mb-20">
+          <div className="max-w-3xl mx-auto text-center mb-16">
             <div className="flex items-center justify-center gap-4 mb-6">
               <div className="h-px w-10 bg-gold/40" />
               <span className="section-label">Scripture & Fellowship</span>
@@ -41,20 +41,43 @@ const BibleStudySection = () => {
           </div>
         </FadeIn>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
-          {/* What to Expect */}
-          <FadeIn from="left">
-            <div className="space-y-6">
-              <div className="border border-white/8 bg-tech-darker/40 p-8">
-                <div className="flex items-center gap-3 mb-8">
-                  <Book className="w-5 h-5 text-gold/70" aria-hidden="true" />
-                  <h3 className="font-display text-2xl font-light text-mist">What to Expect</h3>
+        {/* Schedule — horizontal 3-column row */}
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-16">
+          {schedule.map((item, i) => (
+            <FadeIn key={i} delay={i * 0.08}>
+              <div className="border border-white/8 bg-tech-darker/40 p-6 flex items-center gap-5 hover:border-gold/20 transition-all duration-300 group">
+                <div className="w-12 h-12 border border-gold/25 flex items-center justify-center flex-shrink-0 group-hover:border-gold/50 transition-colors duration-300">
+                  <item.icon className="w-5 h-5 text-gold/60 group-hover:text-gold/80 transition-colors duration-300" aria-hidden="true" />
                 </div>
-                <div className="space-y-5">
+                <div>
+                  <h3 className="font-display text-xl font-light text-mist">{item.title}</h3>
+                  <p className="text-stone text-sm font-sans font-light mt-0.5">{item.subtitle}</p>
+                </div>
+              </div>
+            </FadeIn>
+          ))}
+        </div>
+
+        {/* Session Flow + Current Series */}
+        <div className="grid lg:grid-cols-2 gap-12 items-start">
+
+          {/* Session Flow — numbered timeline */}
+          <FadeIn from="left">
+            <div className="border border-white/8 bg-tech-darker/40 p-8">
+              <div className="flex items-center gap-3 mb-8">
+                <Book className="w-5 h-5 text-gold/70" aria-hidden="true" />
+                <h3 className="font-display text-2xl font-light text-mist">Session Flow</h3>
+              </div>
+              <div className="relative">
+                {/* Vertical timeline spine */}
+                <div className="absolute left-[11px] top-3 bottom-3 w-px bg-white/8" aria-hidden="true" />
+                <div className="space-y-6">
                   {expectations.map((item, i) => (
-                    <div key={i} className="flex items-start gap-4">
-                      <div className={`w-1.5 h-1.5 ${item.color} rounded-full mt-2 flex-shrink-0 opacity-70`} aria-hidden="true" />
-                      <p className="text-stone text-base leading-relaxed font-sans font-light">
+                    <div key={i} className="flex items-start gap-5">
+                      <div className="w-6 h-6 rounded-full border border-gold/30 bg-tech-dark flex items-center justify-center flex-shrink-0 z-10">
+                        <span className="text-[10px] font-mono text-gold/60">{i + 1}</span>
+                      </div>
+                      <p className="text-stone text-base leading-relaxed font-sans font-light pt-0.5">
                         <strong className="text-mist/80 font-medium">{item.label}:</strong>{' '}
                         {item.desc}
                       </p>
@@ -62,17 +85,26 @@ const BibleStudySection = () => {
                   ))}
                 </div>
               </div>
+            </div>
+          </FadeIn>
 
-              {/* Current Series */}
-              <div className="border border-gold/20 bg-gold/3 p-6">
-                <h4 className="font-sans text-xs tracking-[0.2em] uppercase font-semibold text-gold/80 mb-3">
-                  Current Series
-                </h4>
-                <p className="text-stone text-base leading-relaxed font-sans font-light mb-5">
-                  We're currently studying{' '}
-                  <span className="text-mist/80 font-medium">Spiritual Warfare</span>, designed to
-                  equip believers to understand, engage, and overcome in the spiritual battles they
-                  face daily.
+          {/* Current Series */}
+          <FadeIn from="right" delay={0.1}>
+            <div className="border border-gold/20 bg-gold/3 p-8 flex flex-col gap-5">
+              <h4 className="font-sans text-xs tracking-[0.2em] uppercase font-semibold text-gold/80">
+                Current Series
+              </h4>
+              <h3 className="font-display text-3xl md:text-4xl font-light text-mist leading-tight">
+                Spiritual Warfare
+              </h3>
+              <p className="text-stone text-base leading-relaxed font-sans font-light">
+                Equipping believers to understand, engage, and overcome the spiritual battles they
+                face daily — with wisdom from Scripture and the full armor of God.
+              </p>
+              <div className="border-t border-gold/10 pt-5">
+                <p className="text-stone text-sm font-sans font-light mb-6">
+                  Designed for Christian men in tech navigating the spiritual challenges of the
+                  modern world.
                 </p>
                 <Link
                   to="/join"
@@ -84,24 +116,6 @@ const BibleStudySection = () => {
             </div>
           </FadeIn>
 
-          {/* Schedule cards */}
-          <div className="space-y-4">
-            {schedule.map((item, i) => (
-              <FadeIn key={i} delay={i * 0.1} from="right">
-                <div
-                  className="border border-white/8 bg-tech-darker/40 p-7 flex items-center gap-6 hover:border-gold/20 transition-all duration-300 group"
-                >
-                  <div className="w-14 h-14 border border-gold/25 flex items-center justify-center flex-shrink-0 group-hover:border-gold/50 transition-colors duration-300">
-                    <item.icon className="w-6 h-6 text-gold/60 group-hover:text-gold/80 transition-colors duration-300" aria-hidden="true" />
-                  </div>
-                  <div>
-                    <h3 className="font-display text-2xl font-light text-mist">{item.title}</h3>
-                    <p className="text-stone text-base font-sans font-light mt-1">{item.subtitle}</p>
-                  </div>
-                </div>
-              </FadeIn>
-            ))}
-          </div>
         </div>
       </div>
     </section>
