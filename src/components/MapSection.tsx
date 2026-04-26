@@ -17,10 +17,6 @@ const africanCountries = [
   'Tanzania', 'Togo', 'Tunisia', 'Uganda', 'Zambia', 'Zimbabwe', 'Eswatini', 
   'Côte d\'Ivoire', 'Rep. of the Congo', 'Dem. Rep. Congo', 'W. Sahara', 
   'Western Sahara', 'United Republic of Tanzania', 'eSwatini',
-  // Add these to catch variations:
-  'Congo, Democratic Republic of the', 
-  'Congo, Republic of the',
-  'Tanzania, United Republic of'
 ];
 
 const MapSection = () => {
