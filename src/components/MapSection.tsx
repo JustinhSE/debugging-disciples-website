@@ -1,27 +1,10 @@
 'use client';
 
 import { ComposableMap, Geographies, Geography, Marker } from 'react-simple-maps';
+import { AFRICA_COUNTRY_IDS, CANADA, USA } from '@/data/mapData';
 
 const geoUrl =
   'https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json';
-
-const africanCountries = [
-  'Algeria', 'Angola', 'Benin', 'Botswana', 'Burkina Faso', 'Burundi', 'Cameroon', 
-  'Cape Verde', 'Central African Republic', 'Chad', 'Comoros', 'Congo', 
-  'Democratic Republic of the Congo', 'Djibouti', 'Egypt', 'Equatorial Guinea', 
-  'Eritrea', 'Ethiopia', 'Gabon', 'Gambia', 'Ghana', 'Guinea', 'Guinea-Bissau', 
-  'Ivory Coast', 'Kenya', 'Lesotho', 'Liberia', 'Libya', 'Madagascar', 'Malawi', 
-  'Mali', 'Mauritania', 'Mauritius', 'Morocco', 'Mozambique', 'Namibia', 'Niger', 
-  'Nigeria', 'Rwanda', 'Sao Tome and Principe', 'Senegal', 'Seychelles', 
-  'Sierra Leone', 'Somalia', 'South Africa', 'South Sudan', 'Sudan', 'Swaziland', 
-  'Tanzania', 'Togo', 'Tunisia', 'Uganda', 'Zambia', 'Zimbabwe', 'Eswatini', 
-  'Côte d\'Ivoire', 'Rep. of the Congo', 'Dem. Rep. Congo', 'W. Sahara', 
-  'Western Sahara', 'United Republic of Tanzania', 'eSwatini',
-  // Add these to catch variations:
-  'Congo, Democratic Republic of the', 
-  'Congo, Republic of the',
-  'Tanzania, United Republic of'
-];
 
 const MapSection = () => {
   const members = [
@@ -56,10 +39,11 @@ const MapSection = () => {
             <Geographies geography={geoUrl}>
               {({ geographies }) =>
                 geographies.map((geo) => {
-                  const countryName = geo.properties.name;
-                  const isCanada = countryName === 'Canada';
-                  const isUSA = countryName === 'United States of America' || countryName === 'United States';
-                  const isAfrica = africanCountries.includes(countryName);
+                  // geo.id comes from the same atlas source, so ID comparisons are stable across name variants.
+                  const countryId = Number(geo.id);
+                  const isCanada = countryId === CANADA.id;
+                  const isUSA = countryId === USA.id;
+                  const isAfrica = AFRICA_COUNTRY_IDS.has(countryId);
                   
                   return (
                     <Geography
