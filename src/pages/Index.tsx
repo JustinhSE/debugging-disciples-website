@@ -4,6 +4,7 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 import MapSection from "@/components/MapSection";
 import Footer from "@/components/Footer";
 import { useNavigate } from "react-router-dom";
+import { Path } from "@/components/Path";
 
 const Index = () => {
   const navigate = useNavigate();
@@ -14,6 +15,7 @@ const Index = () => {
       <div className="pt-20">
         <HeroSection />
       </div>
+      <Path />
       <TestimonialsSection />
       <div className="flex justify-center pb-12">
         <button
