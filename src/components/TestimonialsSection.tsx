@@ -1,5 +1,6 @@
 import { cn } from "@/lib/utils"
 import { Marquee } from './ui/marquee';
+import MoreTestimonialsButton from "./MoreTestimonialsButton";
 
 const reviews = [
   {
@@ -114,6 +115,10 @@ const TestimonialsSection = () => {
 
         <div className="relative flex flex-col items-center justify-center min-h-[300px]">
           <MarqueeDemo />
+        </div>
+
+        <div className="mt-10 flex justify-center">
+          <MoreTestimonialsButton />
         </div>
       </div>
     </section>
