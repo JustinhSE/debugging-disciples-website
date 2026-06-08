@@ -1,9 +1,14 @@
 
 import { Calendar, Clock, Users, Book } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { motion, useReducedMotion } from 'framer-motion';
 import FadeIn from './FadeIn';
 
 const BibleStudySection = () => {
+  const prefersReducedMotion = useReducedMotion();
+  const maxSeriesImageHeight = '34rem';
+  const seriesImageAnimationDuration = 0.45;
+
   const expectations = [
     { label: 'Opening Prayer', desc: 'We begin each session centering our hearts on God' },
     { label: 'Scripture Reading', desc: "We dive deep into God's Word together" },
@@ -90,19 +95,27 @@ const BibleStudySection = () => {
 
           {/* Current Series */}
           <FadeIn from="right" delay={0.1}>
-            <div className="border border-gold/20 bg-gold/3 p-8 flex flex-col gap-5">
+            <div className="border border-gold/20 bg-gold/3 p-8 md:p-10 flex flex-col gap-6">
               <h4 className="font-sans text-xs tracking-[0.2em] uppercase font-semibold text-gold/80">
                 Current Series
               </h4>
-              <div className="overflow-hidden rounded-lg border border-gold/20 bg-tech-dark/40 aspect-video">
+              <motion.div
+                className="overflow-hidden rounded-lg border border-gold/20 bg-tech-dark/60 aspect-[4/5]"
+                style={{ maxHeight: maxSeriesImageHeight }}
+                initial={prefersReducedMotion ? undefined : { opacity: 0, scale: 0.96 }}
+                whileInView={prefersReducedMotion ? undefined : { opacity: 1, scale: 1 }}
+                viewport={{ once: true, amount: 0.35 }}
+                transition={{ duration: seriesImageAnimationDuration, ease: 'easeOut' }}
+                whileHover={prefersReducedMotion ? undefined : { scale: 1.02 }}
+              >
                 <img
-                  src="https://github.com/user-attachments/assets/fb6912f0-2b24-4153-94b8-00596ae21506"
-                  alt="Current Bible study topic artwork for character study in 1 Samuel focused on David."
-                  className="w-full h-full object-cover"
+                  src="https://github.com/user-attachments/assets/3eeb6cce-50c9-438f-8f82-8bc28a2df355"
+                  alt="Christian studying at a laptop with scripture nearby and a symbolic warrior figure in the background."
+                  className="w-full h-full object-cover object-center"
                   loading="lazy"
                   decoding="async"
                 />
-              </div>
+              </motion.div>
               <h3 className="font-display text-3xl md:text-4xl font-light text-mist leading-tight">
                 Character Study in 1 Samuel
               </h3>
