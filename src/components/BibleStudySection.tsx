@@ -94,17 +94,26 @@ const BibleStudySection = () => {
               <h4 className="font-sans text-xs tracking-[0.2em] uppercase font-semibold text-gold/80">
                 Current Series
               </h4>
+              <div className="overflow-hidden rounded-lg border border-gold/20 bg-tech-dark/40 aspect-video">
+                <img
+                  src="https://github.com/user-attachments/assets/fb6912f0-2b24-4153-94b8-00596ae21506"
+                  alt="Current Bible study topic artwork for character study in 1 Samuel focused on David."
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
               <h3 className="font-display text-3xl md:text-4xl font-light text-mist leading-tight">
-                Spiritual Warfare
+                Character Study in 1 Samuel
               </h3>
               <p className="text-stone text-base leading-relaxed font-sans font-light">
-                Equipping believers to understand, engage, and overcome the spiritual battles they
-                face daily — with wisdom from Scripture and the full armor of God.
+                We are currently focused on David&apos;s life to understand how God forms men through
+                calling, failure, repentance, and faithfulness.
               </p>
               <div className="border-t border-gold/10 pt-5">
                 <p className="text-stone text-sm font-sans font-light mb-6">
-                  Designed for Christian men in tech navigating the spiritual challenges of the
-                  modern world.
+                  Join us as we walk verse-by-verse through 1 Samuel and apply each lesson to real
+                  life in tech, leadership, and brotherhood.
                 </p>
                 <Link
                   to="/join"
