@@ -102,11 +102,11 @@ const BibleStudySection = () => {
               <motion.div
                 className="overflow-hidden rounded-lg border border-gold/20 bg-tech-dark/60 aspect-[4/5]"
                 style={{ maxHeight: maxSeriesImageHeight }}
-                initial={prefersReducedMotion ? false : { opacity: 0, scale: 0.96 }}
+                initial={prefersReducedMotion ? undefined : { opacity: 0, scale: 0.96 }}
                 whileInView={prefersReducedMotion ? undefined : { opacity: 1, scale: 1 }}
                 viewport={{ once: true, amount: 0.35 }}
                 transition={{ duration: seriesImageAnimationDuration, ease: 'easeOut' }}
-                whileHover={prefersReducedMotion ? undefined : { scale: 1.015 }}
+                whileHover={prefersReducedMotion ? undefined : { scale: 1.02 }}
               >
                 <img
                   src="https://github.com/user-attachments/assets/3eeb6cce-50c9-438f-8f82-8bc28a2df355"
