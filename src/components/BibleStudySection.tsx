@@ -94,12 +94,13 @@ const BibleStudySection = () => {
               <h4 className="font-sans text-xs tracking-[0.2em] uppercase font-semibold text-gold/80">
                 Current Series
               </h4>
-              <div className="overflow-hidden rounded-lg border border-gold/20 bg-tech-dark/40">
+              <div className="overflow-hidden rounded-lg border border-gold/20 bg-tech-dark/40 aspect-video">
                 <img
                   src="https://github.com/user-attachments/assets/fb6912f0-2b24-4153-94b8-00596ae21506"
                   alt="Current Bible study topic artwork for character study in 1 Samuel focused on David."
-                  className="w-full h-auto object-cover"
+                  className="w-full h-full object-cover"
                   loading="lazy"
+                  decoding="async"
                 />
               </div>
               <h3 className="font-display text-3xl md:text-4xl font-light text-mist leading-tight">
