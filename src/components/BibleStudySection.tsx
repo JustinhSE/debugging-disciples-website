@@ -6,6 +6,8 @@ import FadeIn from './FadeIn';
 
 const BibleStudySection = () => {
   const prefersReducedMotion = useReducedMotion();
+  const maxSeriesImageHeight = '34rem';
+  const seriesImageAnimationDuration = 0.45;
 
   const expectations = [
     { label: 'Opening Prayer', desc: 'We begin each session centering our hearts on God' },
@@ -98,11 +100,12 @@ const BibleStudySection = () => {
                 Current Series
               </h4>
               <motion.div
-                className="overflow-hidden rounded-lg border border-gold/20 bg-tech-dark/60 aspect-[4/5] max-h-[34rem]"
+                className="overflow-hidden rounded-lg border border-gold/20 bg-tech-dark/60 aspect-[4/5]"
+                style={{ maxHeight: maxSeriesImageHeight }}
                 initial={prefersReducedMotion ? false : { opacity: 0, scale: 0.96 }}
                 whileInView={prefersReducedMotion ? undefined : { opacity: 1, scale: 1 }}
                 viewport={{ once: true, amount: 0.35 }}
-                transition={{ duration: 0.45, ease: 'easeOut' }}
+                transition={{ duration: seriesImageAnimationDuration, ease: 'easeOut' }}
                 whileHover={prefersReducedMotion ? undefined : { scale: 1.015 }}
               >
                 <img
