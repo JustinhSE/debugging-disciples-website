@@ -19,7 +19,7 @@ const BibleStudySection = () => {
 
   const schedule = [
     { icon: Calendar, title: 'Every Sunday', subtitle: 'Weekly consistent gathering' },
-    { icon: Clock, title: '5:00 PM EST', subtitle: 'Accommodated for various time zones' },
+    { icon: Clock, title: '5:00 PM PST', subtitle: 'Accommodated for various time zones' },
     { icon: Users, title: 'Interactive', subtitle: 'Discussion-based, not lecture-style' },
   ];
 
