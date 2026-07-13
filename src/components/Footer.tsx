@@ -1,4 +1,4 @@
-import { Music, Heart, Mail, Slack } from "lucide-react";
+import { Music, Heart, Mail, Slack, Instagram, Linkedin } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -95,10 +95,41 @@ const Footer = () => {
             <p className="text-stone/80 text-xs font-sans font-light tracking-wide">
               © 2024 Debugging Disciples. All rights reserved.
             </p>
-            <div className="flex items-center gap-2 text-stone/80 text-xs font-sans font-light">
-              <span>Made with</span>
-              <Heart className="w-3.5 h-3.5 text-gold/70" />
-              <span>for the Kingdom</span>
+            <div className="flex items-center gap-5">
+              <div className="flex items-center gap-3">
+                <a
+                  href="http://instagram.com/debuggingdisciples"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Debugging Disciples on Instagram"
+                  className="group text-stone/80 hover:text-gold transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold/70 focus-visible:rounded-sm"
+                >
+                  <Instagram className="w-4 h-4 opacity-70 group-hover:opacity-100 transition-opacity" aria-hidden="true" />
+                </a>
+                <a
+                  href="https://www.linkedin.com/company/debuggingdisciples/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Debugging Disciples on LinkedIn"
+                  className="group text-stone/80 hover:text-gold transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold/70 focus-visible:rounded-sm"
+                >
+                  <Linkedin className="w-4 h-4 opacity-70 group-hover:opacity-100 transition-opacity" aria-hidden="true" />
+                </a>
+                <a
+                  href="https://debuggingdisciples.org/join"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Join Debugging Disciples on Slack"
+                  className="group text-stone/80 hover:text-gold transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold/70 focus-visible:rounded-sm"
+                >
+                  <Slack className="w-4 h-4 opacity-70 group-hover:opacity-100 transition-opacity" aria-hidden="true" />
+                </a>
+              </div>
+              <div className="flex items-center gap-2 text-stone/80 text-xs font-sans font-light">
+                <span>Made with</span>
+                <Heart className="w-3.5 h-3.5 text-gold/70" />
+                <span>for the Kingdom</span>
+              </div>
             </div>
           </div>
         </div>
