@@ -102,27 +102,27 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Debugging Disciples on Instagram"
-                  className="text-stone/80 hover:text-gold transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold/70 focus-visible:rounded-sm"
+                  className="group text-stone/80 hover:text-gold transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold/70 focus-visible:rounded-sm"
                 >
-                  <Instagram className="w-4 h-4" aria-hidden="true" />
+                  <Instagram className="w-4 h-4 opacity-70 group-hover:opacity-100 transition-opacity" aria-hidden="true" />
                 </a>
                 <a
                   href="https://www.linkedin.com/company/debuggingdisciples/"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Debugging Disciples on LinkedIn"
-                  className="text-stone/80 hover:text-gold transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold/70 focus-visible:rounded-sm"
+                  className="group text-stone/80 hover:text-gold transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold/70 focus-visible:rounded-sm"
                 >
-                  <Linkedin className="w-4 h-4" aria-hidden="true" />
+                  <Linkedin className="w-4 h-4 opacity-70 group-hover:opacity-100 transition-opacity" aria-hidden="true" />
                 </a>
                 <a
                   href="https://debuggingdisciples.org/join"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Join Debugging Disciples on Slack"
-                  className="text-stone/80 hover:text-gold transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold/70 focus-visible:rounded-sm"
+                  className="group text-stone/80 hover:text-gold transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold/70 focus-visible:rounded-sm"
                 >
-                  <Slack className="w-4 h-4" aria-hidden="true" />
+                  <Slack className="w-4 h-4 opacity-70 group-hover:opacity-100 transition-opacity" aria-hidden="true" />
                 </a>
               </div>
               <div className="flex items-center gap-2 text-stone/80 text-xs font-sans font-light">
