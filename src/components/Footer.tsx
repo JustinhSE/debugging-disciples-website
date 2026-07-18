@@ -78,9 +78,7 @@ const Footer = () => {
                 <span>Slack Community</span>
               </a>
               <a
-                href="https://www.linkedin.com/company/debuggingdisciples/"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="mailto:info@debuggingdisciples.org"
                 className="flex items-center gap-3 text-stone text-sm hover:text-gold transition-colors duration-200 font-sans font-light group py-2 -my-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold/70 focus-visible:rounded-sm"
               >
                 <Mail className="w-4 h-4 opacity-60 group-hover:opacity-100 transition-opacity" aria-hidden="true" />
